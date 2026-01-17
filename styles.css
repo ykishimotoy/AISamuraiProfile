@@ -173,6 +173,10 @@ ul {
   margin-bottom: 24px;
 }
 
+.hero-title span {
+  display: block;
+}
+
 .hero-sub {
   font-size: 1.125rem;
   color: var(--gray-600);
@@ -599,7 +603,8 @@ ul {
   }
 
   .about-image {
-    max-width: 400px;
+    max-width: 320px;
+    width: 100%;
     margin: 0 auto;
   }
 
@@ -627,12 +632,8 @@ ul {
   }
 
   .hero-title {
-    font-size: 1.5rem;
-    line-height: 1.6;
-  }
-
-  .hero-title br {
-    display: none;
+    font-size: 1.25rem;
+    line-height: 1.7;
   }
 
   .about,
@@ -655,14 +656,30 @@ ul {
     font-size: 2rem;
   }
 
+  .about-image {
+    max-width: 320px;
+    width: 100%;
+    margin: 0 auto;
+  }
+
+  .about-image .image-placeholder {
+    aspect-ratio: 1;
+  }
+
   .personal-card {
     grid-template-columns: 1fr;
     text-align: center;
+    padding: 24px;
   }
 
   .personal-image {
-    max-width: 200px;
+    width: 100%;
+    max-width: 320px;
     margin: 0 auto;
+  }
+
+  .personal-image .image-placeholder {
+    aspect-ratio: 1;
   }
 
   .contact {
