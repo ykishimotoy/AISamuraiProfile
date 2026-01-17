@@ -133,10 +133,10 @@ ul {
   min-height: 100vh;
   display: flex;
   flex-direction: column;
-  justify-content: center;
+  justify-content: flex-start;
   align-items: center;
   position: relative;
-  padding: 120px 24px 80px;
+  padding: 120px 24px;
   overflow: hidden;
 }
 
@@ -170,17 +170,11 @@ ul {
   line-height: 1.5;
   letter-spacing: 0;
   color: var(--black);
-  margin-bottom: 24px;
+  margin-bottom: 40px;
 }
 
 .hero-title span {
   display: block;
-}
-
-.hero-sub {
-  font-size: 1.125rem;
-  color: var(--gray-600);
-  margin-bottom: 40px;
 }
 
 .hero-cta {
@@ -302,16 +296,33 @@ ul {
   border-color: var(--gray-700);
 }
 
-.about-text h2 {
-  font-size: clamp(1.75rem, 4vw, 2.5rem);
+
+.about-name {
+  font-size: clamp(1.5rem, 3vw, 2.25rem);
   font-weight: 700;
-  line-height: 1.3;
+  color: var(--black);
+  line-height: 1.4;
+  letter-spacing: -0.01em;
+  margin-bottom: 8px;
+}
+
+.about-title {
+  font-size: 0.9375rem;
+  font-weight: 500;
+  color: var(--gray-600);
+  margin-bottom: 32px;
+}
+
+.about-text h2 {
+  font-size: 1.25rem;
+  font-weight: 700;
+  line-height: 1.4;
   letter-spacing: -0.01em;
   color: var(--black);
   margin-bottom: 24px;
 }
 
-.about-text p {
+.about-text p:not(.about-name):not(.about-title) {
   font-size: 1.0625rem;
   color: var(--gray-600);
   margin-bottom: 32px;
