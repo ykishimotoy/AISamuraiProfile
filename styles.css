@@ -262,6 +262,13 @@ ul {
   position: relative;
 }
 
+.about-image img {
+  width: 100%;
+  aspect-ratio: 1;
+  object-fit: cover;
+  border-radius: var(--radius);
+}
+
 .image-placeholder {
   aspect-ratio: 1;
   background: linear-gradient(135deg, var(--gray-200) 0%, var(--gray-300) 100%);
@@ -348,18 +355,30 @@ ul {
   background: var(--white);
   border-radius: var(--radius);
   overflow: hidden;
-  border: 1px solid var(--gray-200);
+  border: 1px solid var(--gray-300);
   transition: var(--transition);
 }
 
 .project-card:hover {
   transform: translateY(-8px);
   box-shadow: 0 20px 60px rgba(0, 0, 0, 0.1);
-  border-color: transparent;
+  border-color: var(--gray-400);
 }
 
 .project-image {
   position: relative;
+  overflow: hidden;
+}
+
+.project-image img {
+  width: 100%;
+  aspect-ratio: 16/10;
+  object-fit: cover;
+  transition: transform var(--transition);
+}
+
+.project-card:hover .project-image img {
+  transform: scale(1.05);
 }
 
 .project-image .image-placeholder {
