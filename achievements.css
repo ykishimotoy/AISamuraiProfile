@@ -170,6 +170,18 @@
   text-decoration: underline;
 }
 
+/* Community Table - 名称 column bold */
+.community-table td:nth-child(3) {
+  font-weight: 700;
+  color: var(--black);
+}
+
+/* Education Table - 機関・学部 column bold */
+.education-table td:nth-child(3) {
+  font-weight: 700;
+  color: var(--black);
+}
+
 /* Timeline Table */
 .timeline-table td:first-child {
   font-weight: 700;
