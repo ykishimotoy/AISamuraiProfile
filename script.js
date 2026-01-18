@@ -92,11 +92,41 @@
   }
 
   // ============================================
+  // Number Tooltip Toggle
+  // ============================================
+
+  function initTooltipToggle() {
+    const numberItems = document.querySelectorAll('.number-item');
+
+    numberItems.forEach(item => {
+      item.addEventListener('click', function(e) {
+        const wasActive = this.classList.contains('active');
+
+        // Close all other tooltips
+        numberItems.forEach(other => other.classList.remove('active'));
+
+        // Toggle this one
+        if (!wasActive) {
+          this.classList.add('active');
+        }
+      });
+    });
+
+    // Close tooltip when clicking outside
+    document.addEventListener('click', function(e) {
+      if (!e.target.closest('.number-item')) {
+        numberItems.forEach(item => item.classList.remove('active'));
+      }
+    });
+  }
+
+  // ============================================
   // Init
   // ============================================
 
   function init() {
     setLanguage(getSavedLanguage());
+    initTooltipToggle();
   }
 
   if (document.readyState === 'loading') {

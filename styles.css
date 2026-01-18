@@ -488,9 +488,35 @@ ul {
 }
 
 .number-item:hover .number-tooltip,
-.number-item:focus .number-tooltip {
+.number-item.active .number-tooltip {
   opacity: 1;
   visibility: visible;
+}
+
+.number-item.active {
+  z-index: 1;
+}
+
+.numbers-more {
+  text-align: center;
+  margin-top: 48px;
+}
+
+.more-link {
+  display: inline-block;
+  font-size: 13px;
+  font-weight: 500;
+  color: var(--gray-500);
+  padding: 10px 20px;
+  border: 1px solid var(--gray-600);
+  border-radius: 100px;
+  transition: var(--transition);
+}
+
+.more-link:hover {
+  color: var(--white);
+  border-color: var(--gray-400);
+  background: rgba(255, 255, 255, 0.1);
 }
 
 .number {
