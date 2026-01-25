@@ -185,7 +185,7 @@
 /* Timeline Table */
 .timeline-table td:first-child {
   font-weight: 700;
-  color: var(--accent);
+  color: var(--black);
 }
 
 .timeline-table td:nth-child(2) {
