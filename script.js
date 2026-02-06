@@ -121,12 +121,55 @@
   }
 
   // ============================================
+  // PDF Modal
+  // ============================================
+
+  function initPdfModal() {
+    const modal = document.getElementById('pdf-modal');
+    if (!modal) return;
+
+    const iframe = document.getElementById('pdf-modal-iframe');
+    const overlay = modal.querySelector('.pdf-modal-overlay');
+    const closeBtn = modal.querySelector('.pdf-modal-close');
+
+    function openModal(src) {
+      iframe.src = src + '#view=Fit';
+      modal.classList.add('active');
+      document.body.style.overflow = 'hidden';
+    }
+
+    function closeModal() {
+      modal.classList.remove('active');
+      document.body.style.overflow = '';
+      setTimeout(function() { iframe.src = ''; }, 300);
+    }
+
+    document.addEventListener('click', function(e) {
+      var trigger = e.target.closest('.modal-trigger');
+      if (trigger) {
+        e.preventDefault();
+        openModal(trigger.dataset.src);
+      }
+    });
+
+    overlay.addEventListener('click', closeModal);
+    closeBtn.addEventListener('click', closeModal);
+
+    document.addEventListener('keydown', function(e) {
+      if (e.key === 'Escape' && modal.classList.contains('active')) {
+        closeModal();
+      }
+    });
+  }
+
+  // ============================================
   // Init
   // ============================================
 
   function init() {
     setLanguage(getSavedLanguage());
     initTooltipToggle();
+    initPdfModal();
   }
 
   if (document.readyState === 'loading') {
