@@ -334,25 +334,58 @@
   .community-table th:nth-child(6) { min-width: 8em; }
 
   /* 大学 */
-  .university-table th:nth-child(2) { min-width: 4em; }
+  .university-table th:nth-child(1) { min-width: 10em; }
+  .university-table th:nth-child(2) { min-width: 5em; }
+  .university-table th:nth-child(3) { min-width: 7em; }
+  .university-table th:nth-child(4) { min-width: 9em; }
   .university-table th:nth-child(5) { min-width: 10em; }
+  .university-table th:nth-child(6) { min-width: 8em; }
   .university-table th:nth-child(7) { min-width: 4em; }
-  .university-table th:nth-child(8) { min-width: 4em; }
+  .university-table th:nth-child(8) { min-width: 8em; }
+  .university-table th:nth-child(9) { min-width: 10em; }
 
   /* その他教育機関 */
-  .other-edu-table th:nth-child(2) { min-width: 7em; }
-  .other-edu-table th:nth-child(6) { min-width: 5em; }
+  .other-edu-table th:nth-child(1) { min-width: 10em; }
+  .other-edu-table th:nth-child(2) { min-width: 8em; }
+  .other-edu-table th:nth-child(3) { min-width: 11em; }
+  .other-edu-table th:nth-child(4) { min-width: 10em; }
+  .other-edu-table th:nth-child(5) { min-width: 16em; }
+  .other-edu-table th:nth-child(6) { min-width: 8em; }
   .other-edu-table th:nth-child(7) { min-width: 4em; }
-  .other-edu-table th:nth-child(8) { min-width: 5em; }
+  .other-edu-table th:nth-child(8) { min-width: 8em; }
+  .other-edu-table th:nth-child(9) { min-width: 8em; }
 
   /* メディア掲載 */
-  .media-table th:nth-child(2) { min-width: 5em; }
+  .media-table th:nth-child(1) { min-width: 10em; }
+  .media-table th:nth-child(2) { min-width: 7em; }
+  .media-table th:nth-child(3) { min-width: 16em; }
+  .media-table th:nth-child(4) { min-width: 5em; }
+
+  /* プラットフォーム別 */
+  .platform-table th:nth-child(1) { min-width: 9em; }
+  .platform-table th:nth-child(2) { min-width: 8em; }
+  .platform-table th:nth-child(3) { min-width: 5em; }
+  .platform-table th:nth-child(4) { min-width: 5em; }
+
+  /* 注目記事 */
+  .articles-table th:nth-child(1) { min-width: 4em; }
+  .articles-table th:nth-child(2) { min-width: 20em; }
+  .articles-table th:nth-child(3) { min-width: 7em; }
+  .articles-table th:nth-child(4) { min-width: 5em; }
 
   /* 書籍 */
+  .books-table th:nth-child(1) { min-width: 5em; }
   .books-table th:nth-child(2) { min-width: 23em; }
-  .books-table th:nth-child(4) { min-width: 8em; }
-  .books-table th:nth-child(5) { min-width: 6em; }
+  .books-table th:nth-child(3) { min-width: 4em; }
+  .books-table th:nth-child(4) { min-width: 9em; }
+  .books-table th:nth-child(5) { min-width: 8em; }
   .books-table th:nth-child(6) { min-width: 10em; }
+  .books-table th:nth-child(7) { min-width: 5em; }
+
+  /* タイムライン */
+  .timeline-table th:nth-child(1) { min-width: 6em; }
+  .timeline-table th:nth-child(2) { min-width: 14em; }
+  .timeline-table th:nth-child(3) { min-width: 16em; }
 }
 
 @media (max-width: 480px) {
