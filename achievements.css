@@ -318,6 +318,37 @@
   }
 }
 
+/* Education Table - min-width for horizontal scroll on mobile */
+.education-table {
+  min-width: 900px;
+}
+
+/* Mobile column min-widths (スマホのみ) */
+@media (max-width: 768px) {
+  /* コミュニティ・イベント */
+  .community-table th:nth-child(2) { min-width: 5em; }
+  .community-table th:nth-child(3) { min-width: 5em; }
+
+  /* 大学 */
+  .university-table th:nth-child(2) { min-width: 4em; }
+  .university-table th:nth-child(5) { min-width: 10em; }
+
+  /* その他教育機関 */
+  .other-edu-table th:nth-child(2) { min-width: 7em; }
+  .other-edu-table th:nth-child(6) { min-width: 5em; }
+  .other-edu-table th:nth-child(7) { min-width: 4em; }
+  .other-edu-table th:nth-child(8) { min-width: 5em; }
+
+  /* メディア掲載 */
+  .media-table th:nth-child(2) { min-width: 5em; }
+
+  /* 書籍 */
+  .books-table th:nth-child(2) { min-width: 23em; }
+  .books-table th:nth-child(4) { min-width: 8em; }
+  .books-table th:nth-child(5) { min-width: 6em; }
+  .books-table th:nth-child(6) { min-width: 10em; }
+}
+
 @media (max-width: 480px) {
   .achievements-header {
     padding: 60px 0 32px;
