@@ -332,6 +332,8 @@
   /* 大学 */
   .university-table th:nth-child(2) { min-width: 4em; }
   .university-table th:nth-child(5) { min-width: 10em; }
+  .university-table th:nth-child(7) { min-width: 4em; }
+  .university-table th:nth-child(8) { min-width: 4em; }
 
   /* その他教育機関 */
   .other-edu-table th:nth-child(2) { min-width: 7em; }
