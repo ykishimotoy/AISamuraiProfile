@@ -326,8 +326,8 @@
 /* Mobile column min-widths (スマホのみ) */
 @media (max-width: 768px) {
   /* コミュニティ・イベント */
-  .community-table th:nth-child(2) { min-width: 5em; }
-  .community-table th:nth-child(3) { min-width: 5em; }
+  .community-table th:nth-child(2) { min-width: 10em; }
+  .community-table th:nth-child(3) { min-width: 10em; }
 
   /* 大学 */
   .university-table th:nth-child(2) { min-width: 4em; }
