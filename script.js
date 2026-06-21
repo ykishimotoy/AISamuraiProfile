@@ -62,7 +62,7 @@
     if (!activeWrapper) return;
 
     // Select sections that should animate
-    const sections = activeWrapper.querySelectorAll('.hero, .about, .projects, .numbers, .philosophy, .personal, .contact');
+    const sections = activeWrapper.querySelectorAll('.hero, .about, .projects, .portfolio, .numbers, .philosophy, .personal, .contact');
 
     if (!('IntersectionObserver' in window)) {
       sections.forEach(section => section.classList.add('visible'));
