@@ -133,8 +133,10 @@
       if (!thumb || !videoId || thumb.querySelector('iframe')) return;
 
       const iframe = document.createElement('iframe');
+      const isTouchDevice = window.matchMedia('(hover: none) and (pointer: coarse)').matches;
       const params = new URLSearchParams({
         autoplay: '1',
+        mute: isTouchDevice ? '1' : '0',
         playsinline: '1',
         rel: '0',
         enablejsapi: '1',
@@ -155,9 +157,16 @@
       iframe.allow = 'accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share';
       iframe.allowFullscreen = true;
       iframe.addEventListener('load', function() {
-        sendYouTubeCommand('setVolume', [33]);
-        sendYouTubeCommand('unMute');
-        sendYouTubeCommand('playVideo');
+        const playAttempts = [0, 250, 700, 1200];
+        playAttempts.forEach(function(delay) {
+          setTimeout(function() {
+            sendYouTubeCommand('setVolume', [33]);
+            if (!isTouchDevice) {
+              sendYouTubeCommand('unMute');
+            }
+            sendYouTubeCommand('playVideo');
+          }, delay);
+        });
       });
 
       thumb.replaceChildren(iframe);
