@@ -981,6 +981,25 @@ ul {
     font-size: 1.15rem;
   }
 
+  .play-icon {
+    width: 62px;
+    height: 62px;
+  }
+
+  .play-icon::before {
+    border-top-width: 13px;
+    border-bottom-width: 13px;
+    border-left-width: 20px;
+  }
+
+  .play-badge {
+    right: 12px;
+    bottom: 12px;
+    min-height: 30px;
+    padding: 7px 12px;
+    font-size: 11px;
+  }
+
   .numbers {
     padding: 60px 0;
   }
@@ -1058,5 +1077,20 @@ ul {
   .section-desc {
     margin-top: -20px;
     margin-bottom: 32px;
+  }
+}
+
+@media (hover: none) and (pointer: coarse) {
+  .portfolio-card:hover {
+    transform: none;
+  }
+
+  .portfolio-card:hover .portfolio-thumb img {
+    transform: none;
+    opacity: 1;
+  }
+
+  .portfolio-card:hover .play-icon {
+    transform: translate(-50%, -50%);
   }
 }
