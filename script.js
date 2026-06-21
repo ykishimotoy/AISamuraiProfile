@@ -135,12 +135,19 @@
       const iframe = document.createElement('iframe');
       const params = new URLSearchParams({
         autoplay: '1',
-        mute: '1',
         playsinline: '1',
         rel: '0',
         enablejsapi: '1',
         origin: window.location.origin
       });
+
+      function sendYouTubeCommand(func, args) {
+        iframe.contentWindow?.postMessage(JSON.stringify({
+          event: 'command',
+          func: func,
+          args: args || []
+        }), 'https://www.youtube.com');
+      }
 
       iframe.className = 'portfolio-embed';
       iframe.src = 'https://www.youtube.com/embed/' + encodeURIComponent(videoId) + '?' + params.toString();
@@ -148,7 +155,9 @@
       iframe.allow = 'accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share';
       iframe.allowFullscreen = true;
       iframe.addEventListener('load', function() {
-        iframe.contentWindow?.postMessage('{"event":"command","func":"playVideo","args":""}', 'https://www.youtube.com');
+        sendYouTubeCommand('setVolume', [33]);
+        sendYouTubeCommand('unMute');
+        sendYouTubeCommand('playVideo');
       });
 
       thumb.replaceChildren(iframe);
