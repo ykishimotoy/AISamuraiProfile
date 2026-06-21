@@ -479,18 +479,25 @@ ul {
   border: 1px solid var(--gray-300);
   border-radius: var(--radius);
   overflow: hidden;
+  cursor: pointer;
   transition: var(--transition);
   box-shadow: 0 12px 40px rgba(0, 0, 0, 0.06);
 }
 
-.portfolio-card:hover {
+.portfolio-card:hover,
+.portfolio-card:focus-visible {
   transform: translateY(-6px);
   border-color: var(--gray-500);
   box-shadow: 0 20px 60px rgba(0, 0, 0, 0.11);
 }
 
-.portfolio-video-link {
-  display: block;
+.portfolio-card:focus-visible {
+  outline: 3px solid rgba(37, 99, 235, 0.35);
+  outline-offset: 4px;
+}
+
+.portfolio-card.is-playing {
+  cursor: default;
 }
 
 .portfolio-thumb {
@@ -511,6 +518,38 @@ ul {
   opacity: 0.9;
 }
 
+.play-icon {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  width: 76px;
+  height: 76px;
+  border-radius: 50%;
+  background: rgba(250, 250, 250, 0.5);
+  border: 1px solid rgba(255, 255, 255, 0.58);
+  transform: translate(-50%, -50%);
+  pointer-events: none;
+  transition: transform var(--transition), background var(--transition);
+}
+
+.play-icon::before {
+  content: '';
+  position: absolute;
+  top: 50%;
+  left: 53%;
+  width: 0;
+  height: 0;
+  border-top: 16px solid transparent;
+  border-bottom: 16px solid transparent;
+  border-left: 24px solid rgba(13, 13, 13, 0.68);
+  transform: translate(-50%, -50%);
+}
+
+.portfolio-card:hover .play-icon {
+  background: rgba(250, 250, 250, 0.62);
+  transform: translate(-50%, -50%) scale(1.05);
+}
+
 .play-badge {
   position: absolute;
   right: 16px;
@@ -527,6 +566,14 @@ ul {
   font-size: 12px;
   font-weight: 700;
   line-height: 1;
+}
+
+.portfolio-embed {
+  display: block;
+  width: 100%;
+  aspect-ratio: 16/9;
+  border: 0;
+  background: var(--gray-900);
 }
 
 .portfolio-info {
@@ -568,6 +615,7 @@ ul {
   background: var(--gray-100);
   border: 1px solid var(--gray-200);
   border-radius: var(--radius-sm);
+  cursor: default;
 }
 
 .source-work span {
@@ -595,6 +643,10 @@ ul {
   font-weight: 700;
   color: var(--accent);
   transition: var(--transition);
+}
+
+.source-work a {
+  cursor: pointer;
 }
 
 .portfolio-link {

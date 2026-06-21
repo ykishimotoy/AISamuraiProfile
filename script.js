@@ -121,6 +121,46 @@
   }
 
   // ============================================
+  // Portfolio Embedded Playback
+  // ============================================
+
+  function initPortfolioPlayback() {
+    const cards = document.querySelectorAll('.portfolio-card[data-youtube-id]');
+
+    function playCard(card) {
+      const thumb = card.querySelector('.portfolio-thumb');
+      const videoId = card.dataset.youtubeId;
+      if (!thumb || !videoId || thumb.querySelector('iframe')) return;
+
+      const iframe = document.createElement('iframe');
+      iframe.className = 'portfolio-embed';
+      iframe.src = 'https://www.youtube.com/embed/' + encodeURIComponent(videoId) + '?autoplay=1&rel=0';
+      iframe.title = card.querySelector('h3')?.textContent || 'YouTube video';
+      iframe.allow = 'accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share';
+      iframe.allowFullscreen = true;
+
+      thumb.replaceChildren(iframe);
+      card.classList.add('is-playing');
+      card.removeAttribute('role');
+      card.removeAttribute('tabindex');
+    }
+
+    cards.forEach(card => {
+      card.addEventListener('click', function(e) {
+        if (e.target.closest('.source-work')) return;
+        playCard(this);
+      });
+
+      card.addEventListener('keydown', function(e) {
+        if (e.key !== 'Enter' && e.key !== ' ') return;
+        if (e.target.closest('.source-work')) return;
+        e.preventDefault();
+        playCard(this);
+      });
+    });
+  }
+
+  // ============================================
   // PDF Modal
   // ============================================
 
@@ -169,6 +209,7 @@
   function init() {
     setLanguage(getSavedLanguage());
     initTooltipToggle();
+    initPortfolioPlayback();
     initPdfModal();
   }
 
