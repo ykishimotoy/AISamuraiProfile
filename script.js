@@ -133,11 +133,23 @@
       if (!thumb || !videoId || thumb.querySelector('iframe')) return;
 
       const iframe = document.createElement('iframe');
+      const params = new URLSearchParams({
+        autoplay: '1',
+        mute: '1',
+        playsinline: '1',
+        rel: '0',
+        enablejsapi: '1',
+        origin: window.location.origin
+      });
+
       iframe.className = 'portfolio-embed';
-      iframe.src = 'https://www.youtube.com/embed/' + encodeURIComponent(videoId) + '?autoplay=1&rel=0';
+      iframe.src = 'https://www.youtube.com/embed/' + encodeURIComponent(videoId) + '?' + params.toString();
       iframe.title = card.querySelector('h3')?.textContent || 'YouTube video';
       iframe.allow = 'accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share';
       iframe.allowFullscreen = true;
+      iframe.addEventListener('load', function() {
+        iframe.contentWindow?.postMessage('{"event":"command","func":"playVideo","args":""}', 'https://www.youtube.com');
+      });
 
       thumb.replaceChildren(iframe);
       card.classList.add('is-playing');
