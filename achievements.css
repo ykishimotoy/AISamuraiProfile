@@ -466,6 +466,23 @@
   background: var(--white);
 }
 
+.pdf-modal-content img {
+  display: none;
+  max-width: 100%;
+  max-height: calc(100vh - 120px);
+  margin: auto;
+  object-fit: contain;
+  border-radius: var(--radius);
+}
+
+.pdf-modal-content.image-mode iframe {
+  display: none;
+}
+
+.pdf-modal-content.image-mode img {
+  display: block;
+}
+
 .pdf-modal-close {
   align-self: flex-end;
   margin-bottom: 8px;
