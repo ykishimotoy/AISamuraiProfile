@@ -1,5 +1,5 @@
 /**
- * Language Switching & Scroll Animations
+ * Language Switching & Interactive Components
  */
 
 (function() {
@@ -37,9 +37,6 @@
     try {
       localStorage.setItem(STORAGE_KEY, lang);
     } catch (e) {}
-
-    // Re-trigger animations for new content
-    setTimeout(initScrollAnimations, 50);
   }
 
   function getSavedLanguage() {
@@ -52,44 +49,6 @@
 
   langJaBtn.addEventListener('click', () => setLanguage('ja'));
   langEnBtn.addEventListener('click', () => setLanguage('en'));
-
-  // ============================================
-  // Scroll Animations
-  // ============================================
-
-  function initScrollAnimations() {
-    const activeWrapper = document.querySelector('.content-wrapper[style*="block"], .content-wrapper:not([style*="none"])');
-    if (!activeWrapper) return;
-
-    // Select sections that should animate
-    const sections = activeWrapper.querySelectorAll('.hero, .about, .projects, .portfolio, .numbers, .philosophy, .personal, .contact');
-
-    if (!('IntersectionObserver' in window)) {
-      sections.forEach(section => section.classList.add('visible'));
-      return;
-    }
-
-    const observer = new IntersectionObserver((entries) => {
-      entries.forEach(entry => {
-        if (entry.isIntersecting) {
-          entry.target.classList.add('visible');
-          observer.unobserve(entry.target);
-        }
-      });
-    }, {
-      threshold: 0.15,
-      rootMargin: '0px 0px -50px 0px'
-    });
-
-    sections.forEach(section => {
-      section.classList.remove('visible');
-      observer.observe(section);
-    });
-
-    // Hero is always visible immediately
-    const hero = activeWrapper.querySelector('.hero');
-    if (hero) hero.classList.add('visible');
-  }
 
   // ============================================
   // Number Tooltip Toggle
