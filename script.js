@@ -8,47 +8,49 @@
   const STORAGE_KEY = 'preferred-language';
   const DEFAULT_LANG = 'ja';
 
-  const langJaBtn = document.getElementById('lang-ja');
-  const langEnBtn = document.getElementById('lang-en');
-  const contentJa = document.getElementById('content-ja');
-  const contentEn = document.getElementById('content-en');
+  const LANGUAGES = {
+    ja: { htmlLang: 'ja', title: '岸本悠佑 | AI × 教育 × コミュニティ' },
+    en: { htmlLang: 'en', title: 'Yusuke Kishimoto | AI × Education × Community' },
+    zh: { htmlLang: 'zh-CN', title: '岸本悠佑 | AI × 教育 × 社群' }
+  };
 
   // ============================================
   // Language Switching
   // ============================================
 
   function setLanguage(lang) {
-    if (lang === 'en') {
-      contentJa.style.display = 'none';
-      contentEn.style.display = 'block';
-      langJaBtn.classList.remove('active');
-      langEnBtn.classList.add('active');
-      document.documentElement.lang = 'en';
-      document.title = 'Yusuke Kishimoto | AI × Education × Community';
-    } else {
-      contentJa.style.display = 'block';
-      contentEn.style.display = 'none';
-      langJaBtn.classList.add('active');
-      langEnBtn.classList.remove('active');
-      document.documentElement.lang = 'ja';
-      document.title = '岸本悠佑 | AI × 教育 × コミュニティ';
-    }
+    if (!LANGUAGES[lang]) lang = DEFAULT_LANG;
 
     try {
       localStorage.setItem(STORAGE_KEY, lang);
     } catch (e) {}
+
+    // Fall back on pages that don't have this language's content
+    if (!document.getElementById('content-' + lang)) lang = DEFAULT_LANG;
+
+    Object.keys(LANGUAGES).forEach(function(key) {
+      const content = document.getElementById('content-' + key);
+      const btn = document.getElementById('lang-' + key);
+      if (content) content.style.display = key === lang ? 'block' : 'none';
+      if (btn) btn.classList.toggle('active', key === lang);
+    });
+
+    document.documentElement.lang = LANGUAGES[lang].htmlLang;
+    document.title = LANGUAGES[lang].title;
   }
 
   function getSavedLanguage() {
     try {
       const saved = localStorage.getItem(STORAGE_KEY);
-      if (saved === 'ja' || saved === 'en') return saved;
+      if (LANGUAGES[saved]) return saved;
     } catch (e) {}
     return DEFAULT_LANG;
   }
 
-  langJaBtn.addEventListener('click', () => setLanguage('ja'));
-  langEnBtn.addEventListener('click', () => setLanguage('en'));
+  Object.keys(LANGUAGES).forEach(function(key) {
+    const btn = document.getElementById('lang-' + key);
+    if (btn) btn.addEventListener('click', () => setLanguage(key));
+  });
 
   // ============================================
   // Number Tooltip Toggle
