@@ -9,10 +9,14 @@
   const DEFAULT_LANG = 'ja';
 
   const LANGUAGES = {
-    ja: { htmlLang: 'ja', title: '岸本悠佑 | AI × 教育 × コミュニティ' },
-    en: { htmlLang: 'en', title: 'Yusuke Kishimoto | AI × Education × Community' },
-    zh: { htmlLang: 'zh-CN', title: '岸本悠佑 | AI × 教育 × 社群' }
+    ja: { htmlLang: 'ja',    title: '岸本悠佑 | AI × 教育 × コミュニティ' },
+    en: { htmlLang: 'en',    title: 'Yusuke Kishimoto | AI × Education × Community' },
+    zh: { htmlLang: 'zh-CN', title: '岸本悠佑 | AI × 教育 × 社群' },
+    fr: { htmlLang: 'fr',    title: 'Yusuke Kishimoto | IA × Éducation × Communauté' },
+    de: { htmlLang: 'de',    title: 'Yusuke Kishimoto | KI × Bildung × Community' }
   };
+
+  let currentLang = DEFAULT_LANG;
 
   // ============================================
   // Language Switching
@@ -27,16 +31,23 @@
 
     // Fall back on pages that don't have this language's content
     if (!document.getElementById('content-' + lang)) lang = DEFAULT_LANG;
+    currentLang = lang;
 
+    let activeContent = null;
     Object.keys(LANGUAGES).forEach(function(key) {
       const content = document.getElementById('content-' + key);
       const btn = document.getElementById('lang-' + key);
       if (content) content.style.display = key === lang ? 'block' : 'none';
       if (btn) btn.classList.toggle('active', key === lang);
+      if (key === lang) activeContent = content;
     });
 
+    const activeBtn = document.getElementById('lang-' + lang);
+    const current = document.getElementById('lang-current');
+    if (current && activeBtn) current.textContent = activeBtn.dataset.short || lang.toUpperCase();
+
     document.documentElement.lang = LANGUAGES[lang].htmlLang;
-    document.title = LANGUAGES[lang].title;
+    document.title = (activeContent && activeContent.dataset.title) || LANGUAGES[lang].title;
   }
 
   function getSavedLanguage() {
@@ -47,10 +58,112 @@
     return DEFAULT_LANG;
   }
 
-  Object.keys(LANGUAGES).forEach(function(key) {
-    const btn = document.getElementById('lang-' + key);
-    if (btn) btn.addEventListener('click', () => setLanguage(key));
-  });
+  // ?lang=xx in the URL overrides the saved preference (e.g. index.html?lang=en#portfolio).
+  // The parameter is removed from the address bar after it has been applied so that
+  // later manual switches are not undone by a reload.
+  function getLanguageFromUrl() {
+    let lang = null;
+    try {
+      const params = new URLSearchParams(window.location.search);
+      const value = (params.get('lang') || '').toLowerCase();
+      if (LANGUAGES[value]) {
+        lang = value;
+        params.delete('lang');
+        const query = params.toString();
+        const cleanUrl = window.location.pathname + (query ? '?' + query : '') + window.location.hash;
+        history.replaceState(history.state, '', cleanUrl);
+      }
+    } catch (e) {}
+    return lang;
+  }
+
+  // ============================================
+  // Language Dropdown
+  // ============================================
+
+  function initLanguageMenu() {
+    const nav = document.querySelector('.lang-nav');
+    const toggle = document.getElementById('lang-toggle');
+    if (!nav || !toggle) return;
+
+    function setOpen(open) {
+      nav.classList.toggle('open', open);
+      toggle.setAttribute('aria-expanded', open ? 'true' : 'false');
+    }
+
+    toggle.addEventListener('click', function(e) {
+      e.stopPropagation();
+      setOpen(!nav.classList.contains('open'));
+    });
+
+    Object.keys(LANGUAGES).forEach(function(key) {
+      const btn = document.getElementById('lang-' + key);
+      if (btn) btn.addEventListener('click', function() {
+        setLanguage(key);
+        setOpen(false);
+      });
+    });
+
+    document.addEventListener('click', function(e) {
+      if (!e.target.closest('.lang-nav')) setOpen(false);
+    });
+
+    document.addEventListener('keydown', function(e) {
+      if (e.key === 'Escape' && nav.classList.contains('open')) {
+        setOpen(false);
+        toggle.focus();
+      }
+    });
+  }
+
+  // ============================================
+  // In-page anchors (per-language sections)
+  // ============================================
+  // Each language wrapper contains its own copy of a section, so anchors are
+  // resolved against the currently visible wrapper via data-anchor="name".
+
+  function findAnchor(name) {
+    if (!name) return null;
+    const wrapper = document.getElementById('content-' + currentLang);
+    const scope = wrapper || document;
+    let target = null;
+    try {
+      target = scope.querySelector('[data-anchor="' + name + '"]');
+    } catch (e) {}
+    return target;
+  }
+
+  function scrollToAnchor(name, smooth) {
+    const target = findAnchor(name);
+    if (!target) return false;
+    target.scrollIntoView({ behavior: smooth ? 'smooth' : 'auto', block: 'start' });
+    return true;
+  }
+
+  function initAnchors() {
+    document.addEventListener('click', function(e) {
+      const link = e.target.closest('a[href^="#"]');
+      if (!link) return;
+      const name = link.getAttribute('href').slice(1);
+      if (!findAnchor(name)) return;
+      e.preventDefault();
+      scrollToAnchor(name, true);
+      try { history.pushState(null, '', '#' + name); } catch (err) {}
+    });
+
+    window.addEventListener('hashchange', function() {
+      scrollToAnchor(decodeURIComponent(window.location.hash.slice(1)), true);
+    });
+
+    const initial = decodeURIComponent(window.location.hash.slice(1));
+    if (initial && findAnchor(initial)) {
+      // Jump now, and again once images/fonts have settled the layout.
+      scrollToAnchor(initial, false);
+      window.addEventListener('load', function() {
+        setTimeout(function() { scrollToAnchor(initial, false); }, 50);
+      });
+    }
+  }
 
   // ============================================
   // Number Tooltip Toggle
@@ -210,7 +323,9 @@
   // ============================================
 
   function init() {
-    setLanguage(getSavedLanguage());
+    setLanguage(getLanguageFromUrl() || getSavedLanguage());
+    initLanguageMenu();
+    initAnchors();
     initTooltipToggle();
     initPortfolioPlayback();
     initPdfModal();

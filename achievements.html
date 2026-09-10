@@ -15,14 +15,23 @@
 <body>
 
   <!-- Language Switcher -->
-  <nav class="lang-nav">
-    <button id="lang-ja" class="lang-btn active">JP</button>
-    <button id="lang-en" class="lang-btn">EN</button>
-    <button id="lang-zh" class="lang-btn">CH</button>
+  <nav class="lang-nav" aria-label="Language">
+    <button type="button" class="lang-toggle" id="lang-toggle" aria-haspopup="true" aria-expanded="false" aria-controls="lang-menu">
+      <svg class="lang-globe" viewBox="0 0 24 24" width="16" height="16" aria-hidden="true" focusable="false"><circle cx="12" cy="12" r="9.5" fill="none" stroke="currentColor" stroke-width="1.6"/><path d="M2.5 12h19M12 2.5c3 3 3 16 0 19M12 2.5c-3 3-3 16 0 19M4.5 7.5h15M4.5 16.5h15" fill="none" stroke="currentColor" stroke-width="1.4"/></svg>
+      <span class="lang-current" id="lang-current">JP</span>
+      <span class="lang-caret" aria-hidden="true"></span>
+    </button>
+    <ul class="lang-menu" id="lang-menu" role="menu">
+      <li role="none"><button type="button" role="menuitem" id="lang-ja" class="lang-btn active" data-short="JP"><span>日本語</span><small>JP</small></button></li>
+      <li role="none"><button type="button" role="menuitem" id="lang-en" class="lang-btn" data-short="EN"><span>English</span><small>EN</small></button></li>
+      <li role="none"><button type="button" role="menuitem" id="lang-zh" class="lang-btn" data-short="CH"><span>中文</span><small>CH</small></button></li>
+      <li role="none"><button type="button" role="menuitem" id="lang-fr" class="lang-btn" data-short="FR"><span>Français</span><small>FR</small></button></li>
+      <li role="none"><button type="button" role="menuitem" id="lang-de" class="lang-btn" data-short="DE"><span>Deutsch</span><small>DE</small></button></li>
+    </ul>
   </nav>
 
   <!-- ==================== JAPANESE ==================== -->
-  <div id="content-ja" class="content-wrapper">
+  <div id="content-ja" class="content-wrapper" data-title="実績一覧 | 岸本悠佑">
 
     <!-- Header -->
     <header class="achievements-header">
@@ -808,7 +817,7 @@
   </div>
 
   <!-- ==================== ENGLISH ==================== -->
-  <div id="content-en" class="content-wrapper" style="display: none;">
+  <div id="content-en" class="content-wrapper" data-title="Achievements | Yusuke Kishimoto" style="display: none;">
 
     <!-- Header -->
     <header class="achievements-header">
@@ -1583,7 +1592,7 @@
   </div>
 
   <!-- ==================== CHINESE ==================== -->
-  <div id="content-zh" class="content-wrapper" style="display: none;">
+  <div id="content-zh" class="content-wrapper" data-title="实绩一览 | 岸本悠佑" style="display: none;">
 
     <!-- Header -->
     <header class="achievements-header">
@@ -2346,6 +2355,1556 @@
           </a>
         </div>
         <a href="index.html" class="back-link">&larr; 返回首页</a>
+      </div>
+    </footer>
+
+  </div>
+
+  <!-- ==================== FRENCH ==================== -->
+  <div id="content-fr" class="content-wrapper" data-title="Réalisations | Yusuke Kishimoto" style="display: none;">
+
+    <!-- Header -->
+    <header class="achievements-header">
+      <div class="container">
+        <a href="index.html" class="back-link">&larr; Retour à l'accueil</a>
+        <h1>Achievements</h1>
+        <p class="header-subtitle">Portfolio et réalisations</p>
+      </div>
+    </header>
+
+    <!-- Summary Stats -->
+    <section class="summary-stats">
+      <div class="container">
+        <div class="stats-grid">
+          <div class="stat-item">
+            <span class="stat-number">242 000+</span>
+            <span class="stat-label">Vues d'articles</span>
+          </div>
+          <div class="stat-item">
+            <span class="stat-number">4 journaux / 1 TV</span>
+            <span class="stat-label">Couverture médiatique</span>
+          </div>
+          <div class="stat-item">
+            <span class="stat-number">200+</span>
+            <span class="stat-label">Membres Discord</span>
+          </div>
+          <div class="stat-item">
+            <span class="stat-number">5</span>
+            <span class="stat-label">Cours en universités et lycées</span>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ========== 1. Community & Events ========== -->
+    <section class="achievement-section">
+      <div class="container">
+        <h2 class="section-heading">
+          <span class="heading-number">01</span>
+          Communauté et événements
+        </h2>
+
+        <div class="table-wrapper">
+          <table class="achievement-table community-table">
+            <thead>
+              <tr>
+                <th>Année</th>
+                <th>Type</th>
+                <th>Nom</th>
+                <th>Description</th>
+                <th>Chiffres clés</th>
+                <th>Lien</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr>
+                <td>2025~</td>
+                <td>Fondateur / Organisateur</td>
+                <td>Sapporo Sugoi AI Community</td>
+                <td>Communauté qui partage l'enthousiasme autour de l'IA</td>
+                <td>30 événements / 200 membres Discord / 330 membres connpass</td>
+                <td><a href="https://sapporo-sugoi-ai.connpass.com" target="_blank" rel="noopener">connpass</a></td>
+              </tr>
+              <tr>
+                <td>2026</td>
+                <td>Organisateur</td>
+                <td>Sapporo Sugoi AI Festival</td>
+                <td>Événement citoyen pour apprendre, créer et présenter avec l'IA</td>
+                <td>100 visiteurs / 12 intervenants / 8 exposants / 3 partenaires entreprises</td>
+                <td><a href="https://matsuri.sugoiai.org" target="_blank" rel="noopener">Site web</a><br><a href="https://www.hokkaido-np.co.jp/article/1275684/" target="_blank" rel="noopener">Couverture presse</a></td>
+              </tr>
+              <tr>
+                <td>2025~</td>
+                <td>Organisateur / Co-organisateur</td>
+                <td>Événements conjoints avec des entreprises</td>
+                <td>Événements IA organisés en collaboration avec des entreprises</td>
+                <td>4 événements</td>
+                <td><a href="https://www.nttd-mse.com/techsquare/tech-021/" target="_blank" rel="noopener">Sapporo Tech Exchange</a></td>
+              </tr>
+            </tbody>
+          </table>
+        </div>
+      </div>
+    </section>
+
+    <!-- ========== 2. Education / Academia ========== -->
+    <section class="achievement-section alt-bg">
+      <div class="container">
+        <h2 class="section-heading">
+          <span class="heading-number">02</span>
+          Enseignement / Monde académique
+        </h2>
+
+        <h3 class="subsection-title">Universités</h3>
+        <div class="table-wrapper">
+          <table class="achievement-table education-table university-table">
+            <thead>
+              <tr>
+                <th>Date</th>
+                <th>Type</th>
+                <th>Établissement</th>
+                <th>Nom du cours</th>
+                <th>Contenu</th>
+                <th>Niveau</th>
+                <th>Participants</th>
+                <th>Format</th>
+                <th>Lien</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr>
+                <td>10 juil. 2026</td>
+                <td>Présentation en conférence</td>
+                <td>Northern Forestry Society<br>(organisée par la Faculté d'agriculture de l'Université de Hokkaido, sciences forestières)</td>
+                <td>Rencontre de printemps 2026 de la Northern Forestry Society</td>
+                <td>Usages potentiels de l'IA de génération vidéo</td>
+                <td>Enseignants et professionnels de la foresterie</td>
+                <td>30</td>
+                <td>Conférence et démonstration sur place</td>
+                <td><a href="#" class="modal-trigger" data-src="img/kuma.jpg">Photo</a><br><a href="http://lab.agr.hokudai.ac.jp/jfs-h/index.php?plugin=attach&amp;pcmd=open&amp;file=annai_syunki_20260626.pdf&amp;refer=filelist" target="_blank" rel="noopener">Annonce de l'événement</a></td>
+              </tr>
+              <tr>
+                <td>17 juin 2025</td>
+                <td>Cours</td>
+                <td>Université de Hokkaido<br>Économie</td>
+                <td>Cours spécial d'économie</td>
+                <td>Cours sur l'IA générative</td>
+                <td>2e-3e année</td>
+                <td>30</td>
+                <td>Cours en présentiel</td>
+                <td><a href="https://zenn.dev/acntechjp/articles/ad506bc25c89c6" target="_blank" rel="noopener">Fiche de prompts</a><br><a href="#" class="modal-trigger" data-src="img/hokudai.JPG">Photo</a></td>
+              </tr>
+              <tr>
+                <td>3 juin 2025</td>
+                <td>Cours</td>
+                <td>Université de Hokkaido<br>Ingénierie</td>
+                <td>Séminaire spécial d'électronique de l'information</td>
+                <td>Expérience de la méthode agile</td>
+                <td>1re-3e année</td>
+                <td>43</td>
+                <td>Cours en présentiel<br>Atelier</td>
+                <td>-</td>
+              </tr>
+              <tr>
+                <td>9 mai 2025</td>
+                <td>Cours</td>
+                <td>Université de commerce<br>d'Otaru</td>
+                <td>Théorie de la stratégie des systèmes</td>
+                <td>Agents IA en pratique</td>
+                <td>1re-2e année</td>
+                <td>30</td>
+                <td>Cours en ligne</td>
+                <td>-</td>
+              </tr>
+            </tbody>
+          </table>
+        </div>
+
+        <h3 class="subsection-title">Autres établissements d'enseignement et formations</h3>
+        <div class="table-wrapper">
+          <table class="achievement-table education-table other-edu-table">
+            <thead>
+              <tr>
+                <th>Date</th>
+                <th>Type</th>
+                <th>Établissement</th>
+                <th>Nom du cours</th>
+                <th>Contenu</th>
+                <th>Niveau</th>
+                <th>Participants</th>
+                <th>Format</th>
+                <th>Lien</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr>
+                <td>1er juil. 2026</td>
+                <td>Cours au lycée</td>
+                <td>Lycée des pêches d'Otaru (Hokkaido)<br>Département information et communication, groupe de recherche VR</td>
+                <td>Visite de Deep Tech Core Sapporo et découverte de l'IA</td>
+                <td>Projection d'anime IA, génération musicale par IA, séance de prompt engineering</td>
+                <td>1re-2e année et enseignants</td>
+                <td>3</td>
+                <td>Session pratique sur place</td>
+                <td><a href="https://otarusuisan-hs.note.jp/n/nde30dc712868" target="_blank" rel="noopener">Article note</a></td>
+              </tr>
+              <tr>
+                <td>10 mars 2026</td>
+                <td>Cours au lycée</td>
+                <td>Lycée préfectoral d'Akan (Hokkaido)</td>
+                <td>Cours d'utilisation de l'IA (Informatique 1, traitement de l'information)</td>
+                <td>AI Samurai Dojo — Devenez dès aujourd'hui un utilisateur d'armes surpuissantes !</td>
+                <td>1re-2e année (tous les élèves)</td>
+                <td>29</td>
+                <td>Cours en présentiel</td>
+                <td><a href="https://zenn.dev/acntechjp/articles/54552b782d62c7" target="_blank" rel="noopener">Article Zenn</a><br><a href="https://kushironews.jp/2026/04/04/659229/#google_vignette" target="_blank" rel="noopener">Kushiro Shimbun</a><br><a href="#" class="modal-trigger" data-src="img/akan.jpg">Photo</a></td>
+              </tr>
+              <tr>
+                <td>17 févr. 2026</td>
+                <td>Formation</td>
+                <td>Lycée préfectoral d'Akan (Hokkaido)</td>
+                <td>4e formation interne de l'année scolaire 2025</td>
+                <td>Comment maximiser l'engagement des élèves grâce à l'IA tout en respectant le style pédagogique de chaque enseignant</td>
+                <td>Enseignants du lycée</td>
+                <td>14</td>
+                <td>Cours en ligne</td>
+                <td><a href="https://zenn.dev/acntechjp/articles/18f1b6171c6b2c" target="_blank" rel="noopener">Article Zenn</a><br><a href="files/AI講義スライド.pdf" target="_blank" rel="noopener">2. Diapositives</a></td>
+              </tr>
+              <tr>
+                <td>19 févr. 2025</td>
+                <td>Atelier</td>
+                <td>Geek CAMP Academia</td>
+                <td>Devenez XXX dès aujourd'hui grâce à l'IA générative !</td>
+                <td>Exploitation et maintenance des systèmes de nouvelle génération</td>
+                <td>Université, 1re-4e année</td>
+                <td>34</td>
+                <td>Cours en ligne</td>
+                <td><a href="https://talent.supporterz.jp/events/8c358063-37f0-483c-99f6-2b453c8acebc/" target="_blank" rel="noopener">Page de l'événement</a></td>
+              </tr>
+              <!-- Add more rows here -->
+            </tbody>
+          </table>
+        </div>
+      </div>
+    </section>
+
+    <!-- ========== 3. Platforms & Products ========== -->
+    <section class="achievement-section">
+      <div class="container">
+        <h2 class="section-heading">
+          <span class="heading-number">03</span>
+          Plateformes et produits
+        </h2>
+
+        <div class="product-grid">
+          <a href="https://dojo.sugoiai.org" target="_blank" rel="noopener" class="product-card">
+            <div class="product-image">
+              <img src="img/dojo.png" alt="Sugoi AI Dojo">
+            </div>
+            <div class="product-info">
+              <h3>Sugoi AI Dojo</h3>
+              <p>Plateforme gratuite d'e-learning sur l'IA. Sans inscription.</p>
+              <span class="product-link">Apprendre l'IA &rarr;</span>
+            </div>
+          </a>
+
+          <a href="https://matsuri-2026-summer.sugoiai.org/" target="_blank" rel="noopener" class="product-card">
+            <div class="product-image">
+              <img src="img/matsuri2.jpg" alt="Sapporo Sugoi AI Festival">
+            </div>
+            <div class="product-info">
+              <h3>Sapporo Sugoi AI Festival</h3>
+              <p>Un événement citoyen pour apprendre, créer et présenter avec l'IA.</p>
+              <span class="product-link">Voir l'événement &rarr;</span>
+            </div>
+          </a>
+
+          <a href="https://sapporo-sugoi-ai.connpass.com" target="_blank" rel="noopener" class="product-card">
+            <div class="product-image">
+              <img src="img/community.JPG" alt="Sapporo Sugoi AI Community">
+            </div>
+            <div class="product-info">
+              <h3>Sapporo Sugoi AI Community</h3>
+              <p>Une communauté qui partage l'enthousiasme autour de l'IA à travers des événements réguliers.</p>
+              <span class="product-link">Voir les événements &rarr;</span>
+            </div>
+          </a>
+
+          <a href="https://film-2026-summer.sugoiai.org/" target="_blank" rel="noopener" class="product-card">
+            <div class="product-image">
+              <img src="img/film2.jpg" alt="Sapporo Sugoi AI Film Festival">
+            </div>
+            <div class="product-info">
+              <h3>Sapporo Sugoi AI Film Festival</h3>
+              <p>Un festival de films IA pour les créateurs, où chacun peut projeter ses œuvres à Sapporo.</p>
+              <span class="product-link">Voir l'événement &rarr;</span>
+            </div>
+          </a>
+
+          <a href="https://hack-2026-summer.sugoiai.org/" target="_blank" rel="noopener" class="product-card">
+            <div class="product-image">
+              <img src="img/hack.png" alt="Sapporo Sugoi AI Hackathon">
+            </div>
+            <div class="product-info">
+              <h3>Sapporo Sugoi AI Hackathon</h3>
+              <p>Créer un monde en 2 heures. Un hackathon centré sur le développement piloté par l'IA.</p>
+              <span class="product-link">Voir l'événement &rarr;</span>
+            </div>
+          </a>
+        </div>
+      </div>
+    </section>
+
+    <!-- ========== 4. Writing & Media ========== -->
+    <section class="achievement-section alt-bg">
+      <div class="container">
+        <h2 class="section-heading">
+          <span class="heading-number">04</span>
+          Publications et médias
+        </h2>
+
+        <h3 class="subsection-title">Livres</h3>
+        <div class="table-wrapper">
+          <table class="achievement-table books-table">
+            <thead>
+              <tr>
+                <th>Année</th>
+                <th>Titre</th>
+                <th>Rôle</th>
+                <th>Éditeur</th>
+                <th>Format</th>
+                <th>Description</th>
+                <th>URL/ISBN</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr>
+                <td>2026</td>
+                <td><strong>AI Video Production Archives 2026</strong></td>
+                <td>Présenté</td>
+                <td>Genkosha</td>
+                <td>Publication spécialisée</td>
+                <td>Une publication spécialisée de Genkosha consacrée à l'avant-garde de la production vidéo par IA. Présenté en tant que créateur de vidéos IA.</td>
+                <td><a href="https://www.genkosha.co.jp/book/b10193882.html" target="_blank" rel="noopener">Lien</a></td>
+              </tr>
+              <tr>
+                <td>2026</td>
+                <td><strong>Le guide complet des outils d'IA générative par l'AI Samurai — Une carte des 15 domaines</strong></td>
+                <td>Auteur unique / Publié</td>
+                <td>Zenn</td>
+                <td>Livre web</td>
+                <td>Un guide pratique cartographiant 15 domaines de l'IA générative</td>
+                <td><a href="https://zenn.dev/ykishimotoy/books/de8bc95c9b3d57" target="_blank" rel="noopener">Lien</a></td>
+              </tr>
+              <tr>
+                <td>2026</td>
+                <td><strong>Le professeur Shinbai et l'intelligence artificielle</strong></td>
+                <td>Auteur unique / Publié</td>
+                <td>-</td>
+                <td>Roman web</td>
+                <td>Un polar scientifique mêlant IA quantique et biologie de synthèse</td>
+                <td>-</td>
+              </tr>
+              <tr>
+                <td>2026</td>
+                <td><strong>Yumemi Yori '26</strong></td>
+                <td>Contributeur</td>
+                <td>Comité de production Yumemi Yori</td>
+                <td>Doujinshi technique</td>
+                <td>Anthologie rédigée par des ingénieurs d'Accenture et de Yumemi</td>
+                <td><a href="https://techbookfest.org/product/wwLTtBdeawDv2F4EFn72f" target="_blank" rel="noopener">Lien</a>
+                <!-- Backup: https://web.archive.org/web/20260515170627/https://techbookfest.org/product/wwLTtBdeawDv2F4EFn72f --></td>
+              </tr>
+              <tr>
+                <td>2019</td>
+                <td><strong>Shin-Gengo Kinen Hokkaido Senryu Godo Kushu: Reiwa</strong></td>
+                <td>Contributeur</td>
+                <td>Hokkaido Senryu Research Society</td>
+                <td>Broché</td>
+                <td>Anthologie de senryu réunissant 302 poètes de Hokkaido</td>
+                <td><a href="#" class="modal-trigger" data-src="img/reiwa.pdf">Lien</a></td>
+              </tr>
+              <!-- Add more rows here -->
+            </tbody>
+          </table>
+        </div>
+
+        <h3 class="subsection-title">Couverture médiatique</h3>
+        <div class="table-wrapper">
+          <table class="achievement-table media-table">
+            <thead>
+              <tr>
+                <th>Date</th>
+                <th>Média</th>
+                <th>Titre</th>
+                <th>Lien</th>
+              </tr>
+            </thead>
+            <tbody>
+            <tbody>
+              <tr>
+                <td>18 août 2026</td>
+                <td><strong>Newsroom EQUES Inc.</strong></td>
+                <td>Annonce de l'ouverture officielle de la succursale de Hokkaido — Installation au sein de « HooK », l'espace de soutien aux start-up de Sapporo</td>
+                <td><a href="https://eques.co.jp/news/hokkaido-branch/" target="_blank" rel="noopener">Lien</a></td>
+              </tr>
+              <tr>
+                <td>11 juil. 2026</td>
+                <td><strong>COLO-TEK AI Anime</strong></td>
+                <td>COLO-TEK annonce les 50 œuvres nominées &amp; dévoile les visuels clés</td>
+                <td><a href="https://colo-tek.com/news/20260711" target="_blank" rel="noopener">Lien</a></td>
+              </tr>
+              <tr>
+                <td>8 juil. 2026</td>
+                <td><strong>note officiel du lycée des pêches d'Otaru</strong></td>
+                <td>Visite d'installations : nous avons visité « Deep Tech Core Sapporo » !</td>
+                <td><a href="https://otarusuisan-hs.note.jp/n/nde30dc712868" target="_blank" rel="noopener">Lien</a></td>
+              </tr>
+              <tr>
+                <td>7 juil. 2026</td>
+                <td><strong>Site RP d'EQUES Inc.</strong></td>
+                <td>Annonce : ouverture d'un nouveau bureau « EQUES Sapporo Office » à Sapporo, Hokkaido</td>
+                <td><a href="https://eques.co.jp/news/sapporo-office/" target="_blank" rel="noopener">Lien</a></td>
+              </tr>
+              <tr>
+                <td>4 avr. 2026</td>
+                <td><strong>Kushiro Shimbun</strong></td>
+                <td>Le lycée d'Akan organise un cours d'IA utilisant ChatGPT pour la création d'images</td>
+                <td><a href="https://kushironews.jp/2026/04/04/659229/#google_vignette" target="_blank" rel="noopener">Lien</a>
+                <!-- Backup: https://web.archive.org/web/20260515164047/https://kushironews.jp/2026/04/04/659229/ --></td>
+              </tr>
+              <tr>
+                <td>1er avr. 2026</td>
+                <td><strong>Samurai Engineer</strong></td>
+                <td>Top 6 des événements IA générative recommandés à Hokkaido [sélection d'après les avis]</td>
+                <td><a href="https://generative-ai.sejuku.net/blog/306765/" target="_blank" rel="noopener">Lien</a>
+                <!-- Backup: https://web.archive.org/web/20260515164236/https://generative-ai.sejuku.net/blog/306765/ --></td>
+              </tr>
+              <tr>
+                <td>7 mars 2026</td>
+                <td><strong>J:COM</strong></td>
+                <td>Diffusion en direct de « Jimoto no Ichiban » ! « Jimotopi LIVE » [L'avenir de la technologie numérique à Sapporo est là !?]</td>
+                <td><a href="https://www.youtube.com/live/TQnj15YX55E?t=3060" target="_blank" rel="noopener">Lien</a>
+                <!-- Backup: https://web.archive.org/web/20260515165526/https://www.youtube.com/live/TQnj15YX55E?t=3060s --></td>
+              </tr>
+              <tr>
+                <td>16 févr. 2026</td>
+                <td><strong>Hokkaido Shimbun</strong></td>
+                <td>Humains et IA fusionnent par la musique lors du festival de Sapporo</td>
+                <td><a href="https://www.hokkaido-np.co.jp/article/1275684/" target="_blank" rel="noopener">Lien</a>
+                <!-- Backup: https://web.archive.org/web/20260515164236/https://www.hokkaido-np.co.jp/article/1275684/ --></td>
+              </tr>
+              <tr>
+                <td>10 févr. 2026</td>
+                <td><strong>Hokkaido Shimbun</strong></td>
+                <td>Yusuke Kishimoto, fondateur d'une communauté de passionnés d'IA</td>
+                <td><a href="https://www.hokkaido-np.co.jp/article/1273433/" target="_blank" rel="noopener">Lien</a>
+                <!-- Backup: https://web.archive.org/web/20260515164259/https://www.hokkaido-np.co.jp/article/1273433/ --></td>
+              </tr>
+              <tr>
+                <td>2 févr. 2026</td>
+                <td><strong>Hokkaido Shimbun</strong></td>
+                <td>Des bénévoles de Sapporo organisent un événement IA — Première édition le 15 avec des expositions pour toute la famille</td>
+                <td><a href="https://www.hokkaido-np.co.jp/article/1270160/" target="_blank" rel="noopener">Lien</a>
+                <!-- Backup: https://web.archive.org/web/20260515165118/https://www.hokkaido-np.co.jp/article/1270160/ --></td>
+              </tr>
+              <!-- Add more rows here -->
+            </tbody>
+          </table>
+        </div>
+
+        <h3 class="subsection-title">Par plateforme</h3>
+        <div class="table-wrapper">
+          <table class="achievement-table platform-table">
+            <thead>
+              <tr>
+                <th>Plateforme</th>
+                <th>Pages vues (total)</th>
+                <th>Articles</th>
+                <th>Lien</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr>
+                <td>Zenn</td>
+                <td>242 000+</td>
+                <td>54</td>
+                <td><a href="https://zenn.dev/ykishimotoy" target="_blank" rel="noopener">Zenn</a></td>
+              </tr>
+              <tr>
+                <td>note</td>
+                <td>300</td>
+                <td>8</td>
+                <td><a href="https://note.com/ykishimotoy" target="_blank" rel="noopener">note</a></td>
+              </tr>
+            </tbody>
+          </table>
+        </div>
+
+        <h3 class="subsection-title">Articles les plus lus</h3>
+        <div class="table-wrapper">
+          <table class="achievement-table articles-table">
+            <thead>
+              <tr>
+                <th>Rang</th>
+                <th>Titre</th>
+                <th>Pages vues</th>
+                <th>Lien</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr>
+                <td>#1</td>
+                <td>Le jour où l'IA a pris le contrôle de « PowerPoint » : NotebookLM produit en série des diapositives de niveau pro en 10 minutes</td>
+                <td>52 004</td>
+                <td><a href="https://zenn.dev/acntechjp/articles/a89d758d2178b6" target="_blank" rel="noopener">Lien</a></td>
+              </tr>
+              <tr>
+                <td>#2</td>
+                <td>Enfin là ! « Kirigami » — L'outil ultime pour convertir les diapositives NotebookLM en PowerPoint modifiable</td>
+                <td>46 513</td>
+                <td><a href="https://zenn.dev/acntechjp/articles/a878b6aa38fe53" target="_blank" rel="noopener">Lien</a></td>
+              </tr>
+              <tr>
+                <td>#3</td>
+                <td>Comment supprimer les filigranes dans Sora2 (méthodes officielles &amp; non officielles)</td>
+                <td>27 205</td>
+                <td><a href="https://zenn.dev/acntechjp/articles/c301d0df1c717f" target="_blank" rel="noopener">Lien</a></td>
+              </tr>
+              <tr>
+                <td>#4</td>
+                <td>Désormais modifiables ! Astuces pratiques pour peaufiner les diapositives NotebookLM (texte &amp; illustrations)</td>
+                <td>23 048</td>
+                <td><a href="https://zenn.dev/acntechjp/articles/482fe1a625b0be" target="_blank" rel="noopener">Lien</a></td>
+              </tr>
+              <tr>
+                <td>#5</td>
+                <td>GPT-OSS est incroyable !! Exécuter les modèles 120b et 20b en local (Mac, 128 Go de mémoire)</td>
+                <td>14 674</td>
+                <td><a href="https://zenn.dev/acntechjp/articles/e8206aaa1bef3e" target="_blank" rel="noopener">Lien</a></td>
+              </tr>
+              <tr>
+                <td>#6</td>
+                <td>Les pièges courants lors de la migration d'un Mac Intel vers la série M</td>
+                <td>12 717</td>
+                <td><a href="https://zenn.dev/acntechjp/articles/230b0bb616c9e5" target="_blank" rel="noopener">Lien</a></td>
+              </tr>
+              <tr>
+                <td>#7</td>
+                <td>Comment utiliser la fonction Cameo dans Sora2</td>
+                <td>11 820</td>
+                <td><a href="https://zenn.dev/acntechjp/articles/3383929cd8bce2" target="_blank" rel="noopener">Lien</a></td>
+              </tr>
+              <tr>
+                <td>#8</td>
+                <td>Quelle est la limite de génération de diapositives de NotebookLM ? (Comparatif payant vs gratuit)</td>
+                <td>11 522</td>
+                <td><a href="https://zenn.dev/link/articles/581d9b5122eb80" target="_blank" rel="noopener">Lien</a></td>
+              </tr>
+            </tbody>
+          </table>
+        </div>
+
+      </div>
+    </section>
+
+    <!-- ========== 5. Timeline ========== -->
+    <section class="achievement-section">
+      <div class="container">
+        <h2 class="section-heading">
+          <span class="heading-number">05</span>
+          Chronologie
+        </h2>
+
+        <div class="table-wrapper">
+          <table class="achievement-table timeline-table">
+            <thead>
+              <tr>
+                <th>Date</th>
+                <th>Événement</th>
+                <th>Détails</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr>
+                <td>Juin 2026</td>
+                <td>Journée du Sapporo Sugoi AI Festival</td>
+                <td>Co-organisation du Sapporo Sugoi AI Film Festival et du Sapporo Sugoi AI Hackathon</td>
+              </tr>
+              <tr>
+                <td>Mai 2026</td>
+                <td>Expansion de la communauté Discord Sapporo Sugoi AI</td>
+                <td>Plus de 200 membres</td>
+              </tr>
+              <tr>
+                <td>Févr. 2026</td>
+                <td>Expansion de la communauté Discord Sapporo Sugoi AI</td>
+                <td>Plus de 150 membres</td>
+              </tr>
+              <tr>
+                <td>Févr. 2026</td>
+                <td>Tenue du Sapporo Sugoi AI Festival</td>
+                <td>Un festival citoyen pour apprendre, relever des défis et s'amuser avec l'IA</td>
+              </tr>
+              <tr>
+                <td>2025.12</td>
+                <td>Lancement de Sugoi AI Dojo</td>
+                <td>Un site web gratuit et sans inscription où chacun peut acquérir des compétences en IA</td>
+              </tr>
+              <tr>
+                <td>2025.12</td>
+                <td>Lancement de la communauté Discord Sapporo Sugoi AI</td>
+                <td>Plus de 104 membres en 1 mois</td>
+              </tr>
+              <tr>
+                <td>2025.3</td>
+                <td>Fondation de la Sapporo Sugoi AI Community</td>
+                <td>Une organisation citoyenne fondée sur le concept « Partager l'enthousiasme autour de l'IA »</td>
+              </tr>
+            </tbody>
+          </table>
+        </div>
+      </div>
+    </section>
+
+    <!-- ========== 6. Works ========== -->
+    <section class="achievement-section alt-bg visible">
+      <div class="container">
+        <h2 class="section-heading">
+          <span class="heading-number">06</span>
+          Œuvres
+          <span class="heading-subtitle">Œuvres vidéo</span>
+        </h2>
+
+        <div class="portfolio-grid">
+
+          <article class="portfolio-card" data-youtube-id="oEXRL-_JLHk" role="button" tabindex="0" aria-label="Lire Un gardien de phare spatial">
+            <div class="portfolio-thumb">
+              <img src="https://img.youtube.com/vi/oEXRL-_JLHk/hqdefault.jpg" alt="Un gardien de phare spatial">
+              <span class="play-icon" aria-hidden="true"></span>
+              <span class="play-badge">YouTube</span>
+            </div>
+            <div class="portfolio-info">
+              <span class="portfolio-type">Court métrage IA</span>
+              <h3>Un gardien de phare spatial</h3>
+              <p>L'histoire d'un vieil homme qui veille seul sur un phare dans l'espace. Un film en prises de vue réelles entièrement généré par IA.</p>
+              <span class="portfolio-link">Lire la vidéo intégrée &rarr;</span>
+            </div>
+          </article>
+
+          <article class="portfolio-card" data-youtube-id="ci-EPDP2yT4" role="button" tabindex="0" aria-label="Lire La fille du marquis sans talent et la révolution scientifique du vieux sorcier">
+            <div class="portfolio-thumb">
+              <img src="https://img.youtube.com/vi/ci-EPDP2yT4/hqdefault.jpg" alt="La fille du marquis sans talent et la révolution scientifique du vieux sorcier">
+              <span class="play-icon" aria-hidden="true"></span>
+              <span class="play-badge">YouTube</span>
+            </div>
+            <div class="portfolio-info">
+              <span class="portfolio-type">Animation IA</span>
+              <h3>La fille du marquis sans talent et la révolution scientifique du vieux sorcier</h3>
+              <p>L'histoire des échecs et de l'évolution de la magicienne Pirika. Un anime de combats magiques réalisé par IA, adapté d'un roman web populaire de Koh.</p>
+              <div class="source-work">
+                <span>Concours</span>
+                <strong>Sélectionné au premier tour du concours d'anime IA « COLO-TEK »</strong>
+                <a href="https://colo-tek.com/news/20260711" target="_blank" rel="noopener">Voir l'annonce &rarr;</a>
+              </div>
+              <span class="portfolio-link">Lire la vidéo intégrée &rarr;</span>
+            </div>
+          </article>
+
+          <article class="portfolio-card" data-youtube-id="NPfQU8TR-gE" role="button" tabindex="0" aria-label="Lire La faune des forêts de Hokkaido">
+            <div class="portfolio-thumb">
+              <img src="https://img.youtube.com/vi/NPfQU8TR-gE/hqdefault.jpg" alt="La faune des forêts de Hokkaido">
+              <span class="play-icon" aria-hidden="true"></span>
+              <span class="play-badge">YouTube</span>
+            </div>
+            <div class="portfolio-info">
+              <span class="portfolio-type">Vidéo IA</span>
+              <h3>La faune des forêts de Hokkaido</h3>
+              <p>Une vidéo générée par IA, projetée lors de la rencontre de printemps 2026 de la Northern Forestry Society, qui met en scène les créatures vivant dans les forêts de Hokkaido.</p>
+              <span class="portfolio-link">Lire la vidéo intégrée &rarr;</span>
+            </div>
+          </article>
+
+          <article class="portfolio-card" data-youtube-id="gOX6kQoq6vc" role="button" tabindex="0" aria-label="Lire Comment utiliser l'IA de génération vidéo en foresterie">
+            <div class="portfolio-thumb">
+              <img src="https://img.youtube.com/vi/gOX6kQoq6vc/hqdefault.jpg" alt="Comment utiliser l'IA de génération vidéo en foresterie">
+              <span class="play-icon" aria-hidden="true"></span>
+              <span class="play-badge">YouTube</span>
+            </div>
+            <div class="portfolio-info">
+              <span class="portfolio-type">Vidéo IA</span>
+              <h3>Comment utiliser l'IA de génération vidéo en foresterie</h3>
+              <p>Une vidéo générée par IA, projetée lors de la rencontre de printemps 2026 de la Northern Forestry Society, qui explore les applications de l'IA de génération vidéo en foresterie.</p>
+              <span class="portfolio-link">Lire la vidéo intégrée &rarr;</span>
+            </div>
+          </article>
+
+          <article class="portfolio-card" data-youtube-id="5LewG23dpaQ" role="button" tabindex="0" aria-label="Lire Publicité EQUES Inc. — Implantation à Sapporo">
+            <div class="portfolio-thumb">
+              <img src="https://img.youtube.com/vi/5LewG23dpaQ/hqdefault.jpg" alt="Publicité EQUES Inc. — Implantation à Sapporo">
+              <span class="play-icon" aria-hidden="true"></span>
+              <span class="play-badge">YouTube</span>
+            </div>
+            <div class="portfolio-info">
+              <span class="portfolio-type">Publicité IA</span>
+              <h3>Publicité EQUES Inc. — Implantation à Sapporo</h3>
+              <p>Une publicité illustrant l'implantation à Sapporo de la start-up IA EQUES Inc., produite avec l'IA générative.</p>
+              <span class="portfolio-link">Lire la vidéo intégrée &rarr;</span>
+            </div>
+          </article>
+
+        </div>
+      </div>
+    </section>
+
+    <!-- ========== 7. Career ========== -->
+    <section class="achievement-section">
+      <div class="container">
+        <h2 class="section-heading">
+          <span class="heading-number">07</span>
+          Carrière
+          <span class="heading-subtitle">Parcours professionnel</span>
+        </h2>
+
+        <div class="table-wrapper">
+          <table class="achievement-table career-table">
+            <thead>
+              <tr>
+                <th>Date</th>
+                <th>Entreprise / École / Organisation</th>
+                <th>Poste</th>
+                <th>Responsabilités</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr>
+                <td>Juil. 2026</td>
+                <td><strong>EQUES Inc.</strong></td>
+                <td>Responsable de la succursale de Hokkaido</td>
+                <td>Lancement de la succursale, planification, conseil, ventes</td>
+              </tr>
+              <tr>
+                <td>Sept. 2024</td>
+                <td><strong>Accenture Japan Ltd</strong></td>
+                <td>Analyste senior</td>
+                <td>Développement RPA, formation &amp; promotion de l'IA</td>
+              </tr>
+              <tr>
+                <td>Avr. 2021</td>
+                <td><strong>PERSOL PROCESS &amp; TECHNOLOGY</strong></td>
+                <td>Chef d'unité</td>
+                <td>Développement RPA, gestion de projet, conception de nouveaux services</td>
+              </tr>
+              <tr>
+                <td>Mars 2019</td>
+                <td><strong>Université de Hokkaido, Faculté des sciences, Département des sciences biologiques</strong></td>
+                <td>-</td>
+                <td>Diplômé (licence en sciences)</td>
+              </tr>
+              <tr>
+                <td>Mars 2014</td>
+                <td><strong>Lycée préfectoral d'Urawa (Saitama)</strong></td>
+                <td>-</td>
+                <td>Diplômé</td>
+              </tr>
+              <!-- Add more rows here -->
+            </tbody>
+          </table>
+        </div>
+      </div>
+    </section>
+
+    <!-- ========== Contact ========== -->
+    <footer class="achievements-footer">
+      <div class="container">
+        <h2>Contact</h2>
+        <p>Contactez-moi pour toute collaboration ou demande</p>
+        <div class="contact-list">
+          <a href="https://forms.gle/2ec8u51XB7iNEFso7" target="_blank" rel="noopener" class="contact-item">
+            <span class="contact-icon">✉</span>
+            <span>Formulaire de contact</span>
+          </a>
+          <a href="https://x.com/ykishimotoy" target="_blank" rel="noopener" class="contact-item">
+            <span class="contact-icon">𝕏</span>
+            <span>@ykishimotoy</span>
+          </a>
+        </div>
+        <a href="index.html" class="back-link">&larr; Retour à l'accueil</a>
+      </div>
+    </footer>
+
+  </div>
+
+  <!-- ==================== GERMAN ==================== -->
+  <div id="content-de" class="content-wrapper" data-title="Erfolge | Yusuke Kishimoto" style="display: none;">
+
+    <!-- Header -->
+    <header class="achievements-header">
+      <div class="container">
+        <a href="index.html" class="back-link">&larr; Zurück zur Startseite</a>
+        <h1>Achievements</h1>
+        <p class="header-subtitle">Portfolio & Referenzen</p>
+      </div>
+    </header>
+
+    <!-- Summary Stats -->
+    <section class="summary-stats">
+      <div class="container">
+        <div class="stats-grid">
+          <div class="stat-item">
+            <span class="stat-number">242.000+</span>
+            <span class="stat-label">Artikelaufrufe</span>
+          </div>
+          <div class="stat-item">
+            <span class="stat-number">4 Zeitungen / 1 TV</span>
+            <span class="stat-label">Medienberichte</span>
+          </div>
+          <div class="stat-item">
+            <span class="stat-number">200+</span>
+            <span class="stat-label">Discord-Mitglieder</span>
+          </div>
+          <div class="stat-item">
+            <span class="stat-number">5</span>
+            <span class="stat-label">Kurse an Universitäten & Oberschulen</span>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ========== 1. Community & Events ========== -->
+    <section class="achievement-section">
+      <div class="container">
+        <h2 class="section-heading">
+          <span class="heading-number">01</span>
+          Community & Veranstaltungen
+        </h2>
+
+        <div class="table-wrapper">
+          <table class="achievement-table community-table">
+            <thead>
+              <tr>
+                <th>Jahr</th>
+                <th>Art</th>
+                <th>Name</th>
+                <th>Beschreibung</th>
+                <th>Kennzahlen</th>
+                <th>Link</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr>
+                <td>2025~</td>
+                <td>Gründer / Organisator</td>
+                <td>Sapporo Sugoi AI Community</td>
+                <td>Community, die die Begeisterung für KI teilt</td>
+                <td>30 Veranstaltungen / 200 Discord-Mitglieder / 330 connpass-Mitglieder</td>
+                <td><a href="https://sapporo-sugoi-ai.connpass.com" target="_blank" rel="noopener">connpass</a></td>
+              </tr>
+              <tr>
+                <td>2026</td>
+                <td>Organisator</td>
+                <td>Sapporo Sugoi AI Festival</td>
+                <td>Bürgergetragene Veranstaltung zum Lernen, Gestalten und Präsentieren mit KI</td>
+                <td>100 Besucher / 12 Vortragende / 8 Aussteller / 3 Unternehmenspartner</td>
+                <td><a href="https://matsuri.sugoiai.org" target="_blank" rel="noopener">Website</a><br><a href="https://www.hokkaido-np.co.jp/article/1275684/" target="_blank" rel="noopener">Presseberichterstattung</a></td>
+              </tr>
+              <tr>
+                <td>2025~</td>
+                <td>Organisator / Mitorganisator</td>
+                <td>Gemeinsame Unternehmensveranstaltungen</td>
+                <td>KI-Veranstaltungen in Zusammenarbeit mit Unternehmen</td>
+                <td>4 Veranstaltungen</td>
+                <td><a href="https://www.nttd-mse.com/techsquare/tech-021/" target="_blank" rel="noopener">Sapporo Tech Exchange</a></td>
+              </tr>
+            </tbody>
+          </table>
+        </div>
+      </div>
+    </section>
+
+    <!-- ========== 2. Education / Academia ========== -->
+    <section class="achievement-section alt-bg">
+      <div class="container">
+        <h2 class="section-heading">
+          <span class="heading-number">02</span>
+          Bildung / Wissenschaft
+        </h2>
+
+        <h3 class="subsection-title">Universitäten</h3>
+        <div class="table-wrapper">
+          <table class="achievement-table education-table university-table">
+            <thead>
+              <tr>
+                <th>Datum</th>
+                <th>Art</th>
+                <th>Institution</th>
+                <th>Kursname</th>
+                <th>Inhalt</th>
+                <th>Studienjahr</th>
+                <th>Teilnehmende</th>
+                <th>Format</th>
+                <th>Link</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr>
+                <td>10. Juli 2026</td>
+                <td>Konferenzvortrag</td>
+                <td>Northern Forestry Society<br>(ausgerichtet von der Fakultät für Agrarwissenschaften der Universität Hokkaido, Forstwissenschaft)</td>
+                <td>Frühjahrsveranstaltung 2026 der Northern Forestry Society</td>
+                <td>Einsatzmöglichkeiten von Videogenerierungs-KI</td>
+                <td>Dozierende & Forstfachleute</td>
+                <td>30</td>
+                <td>Vortrag & Demo vor Ort</td>
+                <td><a href="#" class="modal-trigger" data-src="img/kuma.jpg">Foto</a><br><a href="http://lab.agr.hokudai.ac.jp/jfs-h/index.php?plugin=attach&amp;pcmd=open&amp;file=annai_syunki_20260626.pdf&amp;refer=filelist" target="_blank" rel="noopener">Veranstaltungshinweis</a></td>
+              </tr>
+              <tr>
+                <td>17. Juni 2025</td>
+                <td>Vorlesung</td>
+                <td>Universität Hokkaido<br>Wirtschaftswissenschaften</td>
+                <td>Sondervorlesung Wirtschaftswissenschaften</td>
+                <td>Vorlesung zu generativer KI</td>
+                <td>2.–3. Jahr</td>
+                <td>30</td>
+                <td>Vorlesung vor Ort</td>
+                <td><a href="https://zenn.dev/acntechjp/articles/ad506bc25c89c6" target="_blank" rel="noopener">Prompt-Übersicht</a><br><a href="#" class="modal-trigger" data-src="img/hokudai.JPG">Foto</a></td>
+              </tr>
+              <tr>
+                <td>3. Juni 2025</td>
+                <td>Vorlesung</td>
+                <td>Universität Hokkaido<br>Ingenieurwissenschaften</td>
+                <td>Sonderseminar Informationselektronik</td>
+                <td>Agile Erfahrung</td>
+                <td>1.–3. Jahr</td>
+                <td>43</td>
+                <td>Vorlesung vor Ort<br>Workshop</td>
+                <td>-</td>
+              </tr>
+              <tr>
+                <td>9. Mai 2025</td>
+                <td>Vorlesung</td>
+                <td>Handelsuniversität<br>Otaru</td>
+                <td>Systemstrategietheorie</td>
+                <td>KI-Agenten in der Praxis</td>
+                <td>1.–2. Jahr</td>
+                <td>30</td>
+                <td>Online-Vorlesung</td>
+                <td>-</td>
+              </tr>
+            </tbody>
+          </table>
+        </div>
+
+        <h3 class="subsection-title">Weitere Bildungseinrichtungen & Schulungen</h3>
+        <div class="table-wrapper">
+          <table class="achievement-table education-table other-edu-table">
+            <thead>
+              <tr>
+                <th>Datum</th>
+                <th>Art</th>
+                <th>Institution</th>
+                <th>Kursname</th>
+                <th>Inhalt</th>
+                <th>Jahrgang</th>
+                <th>Teilnehmende</th>
+                <th>Format</th>
+                <th>Link</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr>
+                <td>1. Juli 2026</td>
+                <td>Oberschulvortrag</td>
+                <td>Hokkaido Otaru Fisheries High School<br>Abteilung Information & Kommunikation, VR-Forschungsgruppe</td>
+                <td>Besichtigung des Deep Tech Core Sapporo & KI-Erlebnis</td>
+                <td>KI-Anime-Vorführung, KI-Musikgenerierung, Prompt-Engineering-Session</td>
+                <td>1.–2. Jahrgang & Lehrkräfte</td>
+                <td>3</td>
+                <td>Praxis-Session vor Ort</td>
+                <td><a href="https://otarusuisan-hs.note.jp/n/nde30dc712868" target="_blank" rel="noopener">note-Artikel</a></td>
+              </tr>
+              <tr>
+                <td>10. März 2026</td>
+                <td>Oberschulvortrag</td>
+                <td>Hokkaido Prefectural Akan High School</td>
+                <td>Unterricht zur KI-Nutzung (Informatik 1, Informationsverarbeitung)</td>
+                <td>AI Samurai Dojo – Werde ab heute zum Meister der „Cheat-Waffe“!</td>
+                <td>1.–2. Jahrgang (alle Schüler)</td>
+                <td>29</td>
+                <td>Vortrag vor Ort</td>
+                <td><a href="https://zenn.dev/acntechjp/articles/54552b782d62c7" target="_blank" rel="noopener">Zenn-Beitrag</a><br><a href="https://kushironews.jp/2026/04/04/659229/#google_vignette" target="_blank" rel="noopener">Kushiro Shimbun</a><br><a href="#" class="modal-trigger" data-src="img/akan.jpg">Foto</a></td>
+              </tr>
+              <tr>
+                <td>17. Feb. 2026</td>
+                <td>Schulung</td>
+                <td>Hokkaido Prefectural Akan High School</td>
+                <td>4. schulinterne Fortbildung im Geschäftsjahr 2025</td>
+                <td>Wie sich das Engagement der Schüler mit KI maximieren lässt – unter Berücksichtigung des individuellen Unterrichtsstils jeder Lehrkraft</td>
+                <td>Oberschullehrkräfte</td>
+                <td>14</td>
+                <td>Online-Vortrag</td>
+                <td><a href="https://zenn.dev/acntechjp/articles/18f1b6171c6b2c" target="_blank" rel="noopener">Zenn-Beitrag</a><br><a href="files/AI講義スライド.pdf" target="_blank" rel="noopener">2. Folien</a></td>
+              </tr>
+              <tr>
+                <td>19. Feb. 2025</td>
+                <td>Workshop</td>
+                <td>Geek CAMP Academia</td>
+                <td>Werde ab heute mit generativer KI zum XXX!</td>
+                <td>Systembetrieb & Wartung der nächsten Generation</td>
+                <td>Universität, 1.–4. Jahr</td>
+                <td>34</td>
+                <td>Online-Vortrag</td>
+                <td><a href="https://talent.supporterz.jp/events/8c358063-37f0-483c-99f6-2b453c8acebc/" target="_blank" rel="noopener">Veranstaltungsseite</a></td>
+              </tr>
+              <!-- Add more rows here -->
+            </tbody>
+          </table>
+        </div>
+      </div>
+    </section>
+
+    <!-- ========== 3. Platforms & Products ========== -->
+    <section class="achievement-section">
+      <div class="container">
+        <h2 class="section-heading">
+          <span class="heading-number">03</span>
+          Plattformen & Produkte
+        </h2>
+
+        <div class="product-grid">
+          <a href="https://dojo.sugoiai.org" target="_blank" rel="noopener" class="product-card">
+            <div class="product-image">
+              <img src="img/dojo.png" alt="Sugoi AI Dojo">
+            </div>
+            <div class="product-info">
+              <h3>Sugoi AI Dojo</h3>
+              <p>Kostenlose E-Learning-Plattform für KI. Keine Registrierung erforderlich.</p>
+              <span class="product-link">KI lernen &rarr;</span>
+            </div>
+          </a>
+
+          <a href="https://matsuri-2026-summer.sugoiai.org/" target="_blank" rel="noopener" class="product-card">
+            <div class="product-image">
+              <img src="img/matsuri2.jpg" alt="Sapporo Sugoi AI Festival">
+            </div>
+            <div class="product-info">
+              <h3>Sapporo Sugoi AI Festival</h3>
+              <p>Eine bürgergetragene Veranstaltung zum Lernen, Gestalten und Präsentieren mit KI.</p>
+              <span class="product-link">Veranstaltung ansehen &rarr;</span>
+            </div>
+          </a>
+
+          <a href="https://sapporo-sugoi-ai.connpass.com" target="_blank" rel="noopener" class="product-card">
+            <div class="product-image">
+              <img src="img/community.JPG" alt="Sapporo Sugoi AI Community">
+            </div>
+            <div class="product-info">
+              <h3>Sapporo Sugoi AI Community</h3>
+              <p>Eine Community, die die Begeisterung für KI durch regelmäßige Veranstaltungen teilt.</p>
+              <span class="product-link">Veranstaltungen ansehen &rarr;</span>
+            </div>
+          </a>
+
+          <a href="https://film-2026-summer.sugoiai.org/" target="_blank" rel="noopener" class="product-card">
+            <div class="product-image">
+              <img src="img/film2.jpg" alt="Sapporo Sugoi AI Film Festival">
+            </div>
+            <div class="product-info">
+              <h3>Sapporo Sugoi AI Film Festival</h3>
+              <p>Ein KI-Filmfestival für Kreative, bei dem jeder seine Werke in Sapporo vorführen kann.</p>
+              <span class="product-link">Veranstaltung ansehen &rarr;</span>
+            </div>
+          </a>
+
+          <a href="https://hack-2026-summer.sugoiai.org/" target="_blank" rel="noopener" class="product-card">
+            <div class="product-image">
+              <img src="img/hack.png" alt="Sapporo Sugoi AI Hackathon">
+            </div>
+            <div class="product-info">
+              <h3>Sapporo Sugoi AI Hackathon</h3>
+              <p>Erschaffe eine Welt in 2 Stunden. Ein Hackathon mit Fokus auf KI-gestützte Entwicklung.</p>
+              <span class="product-link">Veranstaltung ansehen &rarr;</span>
+            </div>
+          </a>
+        </div>
+      </div>
+    </section>
+
+    <!-- ========== 4. Writing & Media ========== -->
+    <section class="achievement-section alt-bg">
+      <div class="container">
+        <h2 class="section-heading">
+          <span class="heading-number">04</span>
+          Publikationen & Medien
+        </h2>
+
+        <h3 class="subsection-title">Bücher</h3>
+        <div class="table-wrapper">
+          <table class="achievement-table books-table">
+            <thead>
+              <tr>
+                <th>Jahr</th>
+                <th>Titel</th>
+                <th>Rolle</th>
+                <th>Verlag</th>
+                <th>Format</th>
+                <th>Beschreibung</th>
+                <th>URL/ISBN</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr>
+                <td>2026</td>
+                <td><strong>AI Video Production Archives 2026</strong></td>
+                <td>Vorgestellt</td>
+                <td>Genkosha</td>
+                <td>Fachpublikation</td>
+                <td>Eine Fachpublikation von Genkosha über die Grenzbereiche der KI-Videoproduktion. Vorgestellt als KI-Video-Creator.</td>
+                <td><a href="https://www.genkosha.co.jp/book/b10193882.html" target="_blank" rel="noopener">Link</a></td>
+              </tr>
+              <tr>
+                <td>2026</td>
+                <td><strong>Der vollständige Leitfaden des AI Samurai zu generativen KI-Tools – Eine Landkarte aller 15 Bereiche</strong></td>
+                <td>Alleinautor / Veröffentlicht</td>
+                <td>Zenn</td>
+                <td>Web-Buch</td>
+                <td>Ein Praxisleitfaden, der 15 Bereiche der generativen KI kartiert</td>
+                <td><a href="https://zenn.dev/ykishimotoy/books/de8bc95c9b3d57" target="_blank" rel="noopener">Link</a></td>
+              </tr>
+              <tr>
+                <td>2026</td>
+                <td><strong>Professor Shinbai und die künstliche Intelligenz</strong></td>
+                <td>Alleinautor / Veröffentlicht</td>
+                <td>-</td>
+                <td>Web-Roman</td>
+                <td>Ein Wissenschaftskrimi über Quanten-KI und einen synthetischen Biologen</td>
+                <td>-</td>
+              </tr>
+              <tr>
+                <td>2026</td>
+                <td><strong>Yumemi Yori '26</strong></td>
+                <td>Mitautor</td>
+                <td>Yumemi Yori Production Committee</td>
+                <td>Technisches Doujinshi</td>
+                <td>Anthologie von Ingenieuren von Accenture und Yumemi</td>
+                <td><a href="https://techbookfest.org/product/wwLTtBdeawDv2F4EFn72f" target="_blank" rel="noopener">Link</a>
+                <!-- Backup: https://web.archive.org/web/20260515170627/https://techbookfest.org/product/wwLTtBdeawDv2F4EFn72f --></td>
+              </tr>
+              <tr>
+                <td>2019</td>
+                <td><strong>Shin-Gengo Kinen Hokkaido Senryu Godo Kushu: Reiwa</strong></td>
+                <td>Mitautor</td>
+                <td>Hokkaido Senryu Research Society</td>
+                <td>Softcover</td>
+                <td>Anthologie mit Senryu von 302 Dichtern aus Hokkaido</td>
+                <td><a href="#" class="modal-trigger" data-src="img/reiwa.pdf">Link</a></td>
+              </tr>
+              <!-- Add more rows here -->
+            </tbody>
+          </table>
+        </div>
+
+        <h3 class="subsection-title">Medienberichte</h3>
+        <div class="table-wrapper">
+          <table class="achievement-table media-table">
+            <thead>
+              <tr>
+                <th>Datum</th>
+                <th>Medium</th>
+                <th>Titel</th>
+                <th>Link</th>
+              </tr>
+            </thead>
+            <tbody>
+            <tbody>
+              <tr>
+                <td>18. Aug. 2026</td>
+                <td><strong>EQUES Inc. Newsroom</strong></td>
+                <td>Bekanntgabe der offiziellen Eröffnung der Niederlassung Hokkaido – Aufbau eines Standorts in der Sapporo-Startup-Förderungseinrichtung „HooK“</td>
+                <td><a href="https://eques.co.jp/news/hokkaido-branch/" target="_blank" rel="noopener">Link</a></td>
+              </tr>
+              <tr>
+                <td>11. Juli 2026</td>
+                <td><strong>COLO-TEK AI Anime</strong></td>
+                <td>COLO-TEK gibt alle 50 nominierten Werke bekannt &amp; enthüllt die Key Visuals</td>
+                <td><a href="https://colo-tek.com/news/20260711" target="_blank" rel="noopener">Link</a></td>
+              </tr>
+              <tr>
+                <td>8. Juli 2026</td>
+                <td><strong>Offizielle note-Seite der Otaru Fisheries High School</strong></td>
+                <td>Besichtigung: Wir haben den „Deep Tech Core Sapporo“ besucht!</td>
+                <td><a href="https://otarusuisan-hs.note.jp/n/nde30dc712868" target="_blank" rel="noopener">Link</a></td>
+              </tr>
+              <tr>
+                <td>7. Juli 2026</td>
+                <td><strong>EQUES Inc. PR-Website</strong></td>
+                <td>Bekanntgabe: Neues Büro „EQUES Sapporo Office“ eröffnet in Sapporo, Hokkaido</td>
+                <td><a href="https://eques.co.jp/news/sapporo-office/" target="_blank" rel="noopener">Link</a></td>
+              </tr>
+              <tr>
+                <td>4. Apr. 2026</td>
+                <td><strong>Kushiro Shimbun</strong></td>
+                <td>Akan High School veranstaltet KI-Unterricht mit ChatGPT zur Bilderstellung</td>
+                <td><a href="https://kushironews.jp/2026/04/04/659229/#google_vignette" target="_blank" rel="noopener">Link</a>
+                <!-- Backup: https://web.archive.org/web/20260515164047/https://kushironews.jp/2026/04/04/659229/ --></td>
+              </tr>
+              <tr>
+                <td>1. Apr. 2026</td>
+                <td><strong>Samurai Engineer</strong></td>
+                <td>Die 6 besten empfohlenen Veranstaltungen zu generativer KI in Hokkaido [ausgewählt nach Bewertungen]</td>
+                <td><a href="https://generative-ai.sejuku.net/blog/306765/" target="_blank" rel="noopener">Link</a>
+                <!-- Backup: https://web.archive.org/web/20260515164236/https://generative-ai.sejuku.net/blog/306765/ --></td>
+              </tr>
+              <tr>
+                <td>7. März 2026</td>
+                <td><strong>J:COM</strong></td>
+                <td>Live-Übertragung von „Jimoto no Ichiban“! „Jimotopi LIVE“ [Die Zukunft der digitalen Technologie in Sapporo ist da!?]</td>
+                <td><a href="https://www.youtube.com/live/TQnj15YX55E?t=3060" target="_blank" rel="noopener">Link</a>
+                <!-- Backup: https://web.archive.org/web/20260515165526/https://www.youtube.com/live/TQnj15YX55E?t=3060s --></td>
+              </tr>
+              <tr>
+                <td>16. Feb. 2026</td>
+                <td><strong>Hokkaido Shimbun</strong></td>
+                <td>Mensch und KI verschmelzen durch Musik beim Festival in Sapporo</td>
+                <td><a href="https://www.hokkaido-np.co.jp/article/1275684/" target="_blank" rel="noopener">Link</a>
+                <!-- Backup: https://web.archive.org/web/20260515164236/https://www.hokkaido-np.co.jp/article/1275684/ --></td>
+              </tr>
+              <tr>
+                <td>10. Feb. 2026</td>
+                <td><strong>Hokkaido Shimbun</strong></td>
+                <td>Yusuke Kishimoto, Gründer einer Community von KI-Enthusiasten</td>
+                <td><a href="https://www.hokkaido-np.co.jp/article/1273433/" target="_blank" rel="noopener">Link</a>
+                <!-- Backup: https://web.archive.org/web/20260515164259/https://www.hokkaido-np.co.jp/article/1273433/ --></td>
+              </tr>
+              <tr>
+                <td>2. Feb. 2026</td>
+                <td><strong>Hokkaido Shimbun</strong></td>
+                <td>Ehrenamtliche in Sapporo veranstalten KI-Event – Premiere am 15. mit familienfreundlichen Ausstellungen</td>
+                <td><a href="https://www.hokkaido-np.co.jp/article/1270160/" target="_blank" rel="noopener">Link</a>
+                <!-- Backup: https://web.archive.org/web/20260515165118/https://www.hokkaido-np.co.jp/article/1270160/ --></td>
+              </tr>
+              <!-- Add more rows here -->
+            </tbody>
+          </table>
+        </div>
+
+        <h3 class="subsection-title">Nach Plattform</h3>
+        <div class="table-wrapper">
+          <table class="achievement-table platform-table">
+            <thead>
+              <tr>
+                <th>Plattform</th>
+                <th>Aufrufe gesamt</th>
+                <th>Artikel</th>
+                <th>Link</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr>
+                <td>Zenn</td>
+                <td>242.000+</td>
+                <td>54</td>
+                <td><a href="https://zenn.dev/ykishimotoy" target="_blank" rel="noopener">Zenn</a></td>
+              </tr>
+              <tr>
+                <td>note</td>
+                <td>300</td>
+                <td>8</td>
+                <td><a href="https://note.com/ykishimotoy" target="_blank" rel="noopener">note</a></td>
+              </tr>
+            </tbody>
+          </table>
+        </div>
+
+        <h3 class="subsection-title">Top-Artikel</h3>
+        <div class="table-wrapper">
+          <table class="achievement-table articles-table">
+            <thead>
+              <tr>
+                <th>Rang</th>
+                <th>Titel</th>
+                <th>Aufrufe</th>
+                <th>Link</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr>
+                <td>#1</td>
+                <td>Der Tag, an dem die KI „PowerPoint“ übernahm: NotebookLM erstellt in 10 Minuten Folien auf Profi-Niveau am laufenden Band</td>
+                <td>52.004</td>
+                <td><a href="https://zenn.dev/acntechjp/articles/a89d758d2178b6" target="_blank" rel="noopener">Link</a></td>
+              </tr>
+              <tr>
+                <td>#2</td>
+                <td>Endlich da! „Kirigami“ – Das ultimative Tool, um NotebookLM-Folien in bearbeitbares PowerPoint umzuwandeln</td>
+                <td>46.513</td>
+                <td><a href="https://zenn.dev/acntechjp/articles/a878b6aa38fe53" target="_blank" rel="noopener">Link</a></td>
+              </tr>
+              <tr>
+                <td>#3</td>
+                <td>So entfernt man Wasserzeichen in Sora2 (offizielle &amp; inoffizielle Methoden)</td>
+                <td>27.205</td>
+                <td><a href="https://zenn.dev/acntechjp/articles/c301d0df1c717f" target="_blank" rel="noopener">Link</a></td>
+              </tr>
+              <tr>
+                <td>#4</td>
+                <td>Jetzt bearbeitbar! Praktische Tipps zur Feinabstimmung von NotebookLM-Folien (Text &amp; Illustrationen)</td>
+                <td>23.048</td>
+                <td><a href="https://zenn.dev/acntechjp/articles/482fe1a625b0be" target="_blank" rel="noopener">Link</a></td>
+              </tr>
+              <tr>
+                <td>#5</td>
+                <td>GPT-OSS ist der Wahnsinn!! 120b und 20b lokal ausführen (Mac, 128 GB Arbeitsspeicher)</td>
+                <td>14.674</td>
+                <td><a href="https://zenn.dev/acntechjp/articles/e8206aaa1bef3e" target="_blank" rel="noopener">Link</a></td>
+              </tr>
+              <tr>
+                <td>#6</td>
+                <td>Typische Stolperfallen beim Umstieg vom Intel-Mac auf die M-Serie</td>
+                <td>12.717</td>
+                <td><a href="https://zenn.dev/acntechjp/articles/230b0bb616c9e5" target="_blank" rel="noopener">Link</a></td>
+              </tr>
+              <tr>
+                <td>#7</td>
+                <td>So nutzt man die Cameo-Funktion in Sora2</td>
+                <td>11.820</td>
+                <td><a href="https://zenn.dev/acntechjp/articles/3383929cd8bce2" target="_blank" rel="noopener">Link</a></td>
+              </tr>
+              <tr>
+                <td>#8</td>
+                <td>Wo liegt das Limit der NotebookLM-Folienerstellung? (Vergleich kostenpflichtig vs. kostenlos)</td>
+                <td>11.522</td>
+                <td><a href="https://zenn.dev/link/articles/581d9b5122eb80" target="_blank" rel="noopener">Link</a></td>
+              </tr>
+            </tbody>
+          </table>
+        </div>
+
+      </div>
+    </section>
+
+    <!-- ========== 5. Timeline ========== -->
+    <section class="achievement-section">
+      <div class="container">
+        <h2 class="section-heading">
+          <span class="heading-number">05</span>
+          Zeitleiste
+        </h2>
+
+        <div class="table-wrapper">
+          <table class="achievement-table timeline-table">
+            <thead>
+              <tr>
+                <th>Datum</th>
+                <th>Ereignis</th>
+                <th>Details</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr>
+                <td>Juni 2026</td>
+                <td>Sapporo Sugoi AI Festival Day</td>
+                <td>Gemeinsame Ausrichtung von Sapporo Sugoi AI Film Festival & Sapporo Sugoi AI Hackathon</td>
+              </tr>
+              <tr>
+                <td>Mai 2026</td>
+                <td>Sapporo Sugoi AI Discord-Community erweitert</td>
+                <td>Auf über 200 Mitglieder gewachsen</td>
+              </tr>
+              <tr>
+                <td>Feb. 2026</td>
+                <td>Sapporo Sugoi AI Discord-Community erweitert</td>
+                <td>Auf über 150 Mitglieder gewachsen</td>
+              </tr>
+              <tr>
+                <td>Feb. 2026</td>
+                <td>Sapporo Sugoi AI Festival durchgeführt</td>
+                <td>Ein bürgergetragenes KI-Festival, um KI zu lernen, sich ihr zu stellen und sie zu genießen</td>
+              </tr>
+              <tr>
+                <td>2025.12</td>
+                <td>Sugoi AI Dojo gestartet</td>
+                <td>Eine kostenlose Website ohne Registrierung, auf der jeder KI-Kompetenzen erlernen kann</td>
+              </tr>
+              <tr>
+                <td>2025.12</td>
+                <td>Sapporo Sugoi AI Discord-Community gestartet</td>
+                <td>In einem Monat auf über 104 Mitglieder gewachsen</td>
+              </tr>
+              <tr>
+                <td>2025.3</td>
+                <td>Sapporo Sugoi AI Community gegründet</td>
+                <td>Eine bürgergeführte Organisation mit dem Leitgedanken „Die Begeisterung für KI teilen“</td>
+              </tr>
+            </tbody>
+          </table>
+        </div>
+      </div>
+    </section>
+
+    <!-- ========== 6. Works ========== -->
+    <section class="achievement-section alt-bg visible">
+      <div class="container">
+        <h2 class="section-heading">
+          <span class="heading-number">06</span>
+          Works
+          <span class="heading-subtitle">Videoarbeiten</span>
+        </h2>
+
+        <div class="portfolio-grid">
+
+          <article class="portfolio-card" data-youtube-id="oEXRL-_JLHk" role="button" tabindex="0" aria-label="„Ein Leuchtturmwärter im Weltraum“ abspielen">
+            <div class="portfolio-thumb">
+              <img src="https://img.youtube.com/vi/oEXRL-_JLHk/hqdefault.jpg" alt="Ein Leuchtturmwärter im Weltraum">
+              <span class="play-icon" aria-hidden="true"></span>
+              <span class="play-badge">YouTube</span>
+            </div>
+            <div class="portfolio-info">
+              <span class="portfolio-type">KI-Kurzfilm</span>
+              <h3>Ein Leuchtturmwärter im Weltraum</h3>
+              <p>Die Geschichte eines alten Mannes, der allein einen Leuchtturm im Weltraum hütet. Ein vollständig mit KI generierter Realfilm.</p>
+              <span class="portfolio-link">Eingebettetes Video abspielen &rarr;</span>
+            </div>
+          </article>
+
+          <article class="portfolio-card" data-youtube-id="ci-EPDP2yT4" role="button" tabindex="0" aria-label="„Die talentlose Marquistochter und die wissenschaftliche Revolution des alten Zauberers“ abspielen">
+            <div class="portfolio-thumb">
+              <img src="https://img.youtube.com/vi/ci-EPDP2yT4/hqdefault.jpg" alt="Die talentlose Marquistochter und die wissenschaftliche Revolution des alten Zauberers">
+              <span class="play-icon" aria-hidden="true"></span>
+              <span class="play-badge">YouTube</span>
+            </div>
+            <div class="portfolio-info">
+              <span class="portfolio-type">KI-Animation</span>
+              <h3>Die talentlose Marquistochter und die wissenschaftliche Revolution des alten Zauberers</h3>
+              <p>Die Geschichte der Rückschläge und des Wachstums der Magierin Pirika. Ein KI-produzierter Magie-Kampf-Anime nach einem beliebten Web-Roman von Koh.</p>
+              <div class="source-work">
+                <span>Wettbewerb</span>
+                <strong>Erste Runde des KI-Anime-Wettbewerbs „COLO-TEK“ bestanden</strong>
+                <a href="https://colo-tek.com/news/20260711" target="_blank" rel="noopener">Bekanntgabe ansehen &rarr;</a>
+              </div>
+              <span class="portfolio-link">Eingebettetes Video abspielen &rarr;</span>
+            </div>
+          </article>
+
+          <article class="portfolio-card" data-youtube-id="NPfQU8TR-gE" role="button" tabindex="0" aria-label="„Wildtiere in den Wäldern Hokkaidos“ abspielen">
+            <div class="portfolio-thumb">
+              <img src="https://img.youtube.com/vi/NPfQU8TR-gE/hqdefault.jpg" alt="Wildtiere in den Wäldern Hokkaidos">
+              <span class="play-icon" aria-hidden="true"></span>
+              <span class="play-badge">YouTube</span>
+            </div>
+            <div class="portfolio-info">
+              <span class="portfolio-type">KI-Video</span>
+              <h3>Wildtiere in den Wäldern Hokkaidos</h3>
+              <p>Ein KI-generiertes Video, das bei der Frühjahrsveranstaltung 2026 der Northern Forestry Society gezeigt wurde und die Lebewesen in den Wäldern Hokkaidos porträtiert.</p>
+              <span class="portfolio-link">Eingebettetes Video abspielen &rarr;</span>
+            </div>
+          </article>
+
+          <article class="portfolio-card" data-youtube-id="gOX6kQoq6vc" role="button" tabindex="0" aria-label="„Videogenerierungs-KI in der Forstwirtschaft nutzen“ abspielen">
+            <div class="portfolio-thumb">
+              <img src="https://img.youtube.com/vi/gOX6kQoq6vc/hqdefault.jpg" alt="Videogenerierungs-KI in der Forstwirtschaft nutzen">
+              <span class="play-icon" aria-hidden="true"></span>
+              <span class="play-badge">YouTube</span>
+            </div>
+            <div class="portfolio-info">
+              <span class="portfolio-type">KI-Video</span>
+              <h3>Videogenerierungs-KI in der Forstwirtschaft nutzen</h3>
+              <p>Ein KI-generiertes Video, das bei der Frühjahrsveranstaltung 2026 der Northern Forestry Society gezeigt wurde und untersucht, wie sich Videogenerierungs-KI in der Forstwirtschaft einsetzen lässt.</p>
+              <span class="portfolio-link">Eingebettetes Video abspielen &rarr;</span>
+            </div>
+          </article>
+
+          <article class="portfolio-card" data-youtube-id="5LewG23dpaQ" role="button" tabindex="0" aria-label="„EQUES Inc. Werbespot – Expansion nach Sapporo“ abspielen">
+            <div class="portfolio-thumb">
+              <img src="https://img.youtube.com/vi/5LewG23dpaQ/hqdefault.jpg" alt="EQUES Inc. Werbespot – Expansion nach Sapporo">
+              <span class="play-icon" aria-hidden="true"></span>
+              <span class="play-badge">YouTube</span>
+            </div>
+            <div class="portfolio-info">
+              <span class="portfolio-type">KI-Werbespot</span>
+              <h3>EQUES Inc. Werbespot – Expansion nach Sapporo</h3>
+              <p>Ein mit generativer KI produzierter Werbespot, der die Expansion des KI-Start-ups EQUES Inc. nach Sapporo zeigt.</p>
+              <span class="portfolio-link">Eingebettetes Video abspielen &rarr;</span>
+            </div>
+          </article>
+
+        </div>
+      </div>
+    </section>
+
+    <!-- ========== 7. Career ========== -->
+    <section class="achievement-section">
+      <div class="container">
+        <h2 class="section-heading">
+          <span class="heading-number">07</span>
+          Career
+          <span class="heading-subtitle">Beruflicher Werdegang</span>
+        </h2>
+
+        <div class="table-wrapper">
+          <table class="achievement-table career-table">
+            <thead>
+              <tr>
+                <th>Datum</th>
+                <th>Unternehmen / Schule / Organisation</th>
+                <th>Position</th>
+                <th>Aufgaben</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr>
+                <td>Juli 2026</td>
+                <td><strong>EQUES Inc.</strong></td>
+                <td>Leiter der Niederlassung Hokkaido</td>
+                <td>Aufbau der Niederlassung, Planung, Beratung, Vertrieb</td>
+              </tr>
+              <tr>
+                <td>Sep. 2024</td>
+                <td><strong>Accenture Japan Ltd</strong></td>
+                <td>Senior Analyst</td>
+                <td>RPA-Entwicklung, KI-Schulung &amp; Advocacy</td>
+              </tr>
+              <tr>
+                <td>Apr. 2021</td>
+                <td><strong>PERSOL PROCESS &amp; TECHNOLOGY</strong></td>
+                <td>Unit Leader</td>
+                <td>RPA-Entwicklung, Projektmanagement, Planung neuer Dienstleistungen</td>
+              </tr>
+              <tr>
+                <td>März 2019</td>
+                <td><strong>Universität Hokkaido, Fakultät für Naturwissenschaften, Fachbereich Biowissenschaften</strong></td>
+                <td>-</td>
+                <td>Abschluss (B.Sc.)</td>
+              </tr>
+              <tr>
+                <td>März 2014</td>
+                <td><strong>Saitama Prefectural Urawa High School</strong></td>
+                <td>-</td>
+                <td>Abschluss</td>
+              </tr>
+              <!-- Add more rows here -->
+            </tbody>
+          </table>
+        </div>
+      </div>
+    </section>
+
+    <!-- ========== Contact ========== -->
+    <footer class="achievements-footer">
+      <div class="container">
+        <h2>Kontakt</h2>
+        <p>Kontaktieren Sie mich für Kooperationen oder Anfragen</p>
+        <div class="contact-list">
+          <a href="https://forms.gle/2ec8u51XB7iNEFso7" target="_blank" rel="noopener" class="contact-item">
+            <span class="contact-icon">✉</span>
+            <span>Kontaktformular</span>
+          </a>
+          <a href="https://x.com/ykishimotoy" target="_blank" rel="noopener" class="contact-item">
+            <span class="contact-icon">𝕏</span>
+            <span>@ykishimotoy</span>
+          </a>
+        </div>
+        <a href="index.html" class="back-link">&larr; Zurück zur Startseite</a>
       </div>
     </footer>
 

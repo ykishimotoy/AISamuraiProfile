@@ -14,10 +14,19 @@
 <body>
 
   <!-- Language Switcher -->
-  <nav class="lang-nav">
-    <button id="lang-ja" class="lang-btn active">JP</button>
-    <button id="lang-en" class="lang-btn">EN</button>
-    <button id="lang-zh" class="lang-btn">CH</button>
+  <nav class="lang-nav" aria-label="Language">
+    <button type="button" class="lang-toggle" id="lang-toggle" aria-haspopup="true" aria-expanded="false" aria-controls="lang-menu">
+      <svg class="lang-globe" viewBox="0 0 24 24" width="16" height="16" aria-hidden="true" focusable="false"><circle cx="12" cy="12" r="9.5" fill="none" stroke="currentColor" stroke-width="1.6"/><path d="M2.5 12h19M12 2.5c3 3 3 16 0 19M12 2.5c-3 3-3 16 0 19M4.5 7.5h15M4.5 16.5h15" fill="none" stroke="currentColor" stroke-width="1.4"/></svg>
+      <span class="lang-current" id="lang-current">JP</span>
+      <span class="lang-caret" aria-hidden="true"></span>
+    </button>
+    <ul class="lang-menu" id="lang-menu" role="menu">
+      <li role="none"><button type="button" role="menuitem" id="lang-ja" class="lang-btn active" data-short="JP"><span>日本語</span><small>JP</small></button></li>
+      <li role="none"><button type="button" role="menuitem" id="lang-en" class="lang-btn" data-short="EN"><span>English</span><small>EN</small></button></li>
+      <li role="none"><button type="button" role="menuitem" id="lang-zh" class="lang-btn" data-short="CH"><span>中文</span><small>CH</small></button></li>
+      <li role="none"><button type="button" role="menuitem" id="lang-fr" class="lang-btn" data-short="FR"><span>Français</span><small>FR</small></button></li>
+      <li role="none"><button type="button" role="menuitem" id="lang-de" class="lang-btn" data-short="DE"><span>Deutsch</span><small>DE</small></button></li>
+    </ul>
   </nav>
 
   <!-- ==================== JAPANESE ==================== -->
@@ -59,7 +68,10 @@
               <a href="https://x.com/ykishimotoy" target="_blank" rel="noopener">X</a>
               <a href="https://github.com/ykishimotoy" target="_blank" rel="noopener">GitHub</a>
             </div>
-            <a href="achievements.html" class="btn-achievements">実績一覧を見る &rarr;</a>
+            <div class="about-actions">
+              <a href="#portfolio" class="btn-portfolio">Portfolioを見る &rarr;</a>
+              <a href="achievements.html" class="btn-achievements">実績一覧を見る &rarr;</a>
+            </div>
           </div>
         </div>
       </div>
@@ -131,7 +143,7 @@
     </section>
 
     <!-- Portfolio -->
-    <section class="portfolio">
+    <section class="portfolio" data-anchor="portfolio">
       <div class="container">
         <h2 class="section-title">Portfolio</h2>
         <div class="portfolio-grid">
@@ -332,7 +344,10 @@
               <a href="https://x.com/ykishimotoy" target="_blank" rel="noopener">X</a>
               <a href="https://github.com/ykishimotoy" target="_blank" rel="noopener">GitHub</a>
             </div>
-            <a href="achievements.html" class="btn-achievements">View Achievements &rarr;</a>
+            <div class="about-actions">
+              <a href="#portfolio" class="btn-portfolio">View Portfolio &rarr;</a>
+              <a href="achievements.html" class="btn-achievements">View Achievements &rarr;</a>
+            </div>
           </div>
         </div>
       </div>
@@ -404,7 +419,7 @@
     </section>
 
     <!-- Portfolio -->
-    <section class="portfolio">
+    <section class="portfolio" data-anchor="portfolio">
       <div class="container">
         <h2 class="section-title">Portfolio</h2>
         <div class="portfolio-grid">
@@ -604,7 +619,10 @@
               <a href="https://x.com/ykishimotoy" target="_blank" rel="noopener">X</a>
               <a href="https://github.com/ykishimotoy" target="_blank" rel="noopener">GitHub</a>
             </div>
-            <a href="achievements.html" class="btn-achievements">查看实绩一览 &rarr;</a>
+            <div class="about-actions">
+              <a href="#portfolio" class="btn-portfolio">查看作品集 &rarr;</a>
+              <a href="achievements.html" class="btn-achievements">查看实绩一览 &rarr;</a>
+            </div>
           </div>
         </div>
       </div>
@@ -676,7 +694,7 @@
     </section>
 
     <!-- Portfolio -->
-    <section class="portfolio">
+    <section class="portfolio" data-anchor="portfolio">
       <div class="container">
         <h2 class="section-title">Portfolio</h2>
         <div class="portfolio-grid">
@@ -821,6 +839,558 @@
           <a href="https://forms.gle/2ec8u51XB7iNEFso7" target="_blank" rel="noopener" class="contact-item">
             <span class="contact-icon">✉</span>
             <span>咨询表单</span>
+          </a>
+          <a href="https://x.com/ykishimotoy" target="_blank" rel="noopener" class="contact-item">
+            <span class="contact-icon">𝕏</span>
+            <span>@ykishimotoy</span>
+          </a>
+          <a href="https://discord.gg/Ve2tQeN7cw" target="_blank" rel="noopener" class="contact-item">
+            <span class="contact-icon">💬</span>
+            <span>Discord</span>
+          </a>
+        </div>
+        <p class="copyright">© 2026 Yusuke Kishimoto</p>
+      </div>
+    </footer>
+
+  </div>
+
+  <!-- ==================== FRENCH ==================== -->
+  <div id="content-fr" class="content-wrapper" style="display: none;">
+
+    <!-- Hero -->
+    <section class="hero">
+      <div class="hero-bg"></div>
+      <div class="hero-content">
+        <h1 class="hero-title">
+          <span>L'IA est incroyable.</span>
+          <span>Je transforme cet élan</span>
+          <span>en compétences pour tous.</span>
+        </h1>
+        <div class="hero-cta">
+          <!--<a href="https://dojo.sugoiai.org" target="_blank" rel="noopener" class="btn btn-primary">Apprendre l'IA</a>-->
+        </div>
+      </div>
+      <div class="scroll-indicator">
+        <span></span>
+      </div>
+    </section>
+
+    <!-- About -->
+    <section class="about">
+      <div class="container">
+        <div class="about-grid">
+          <div class="about-image">
+            <img src="img/main.JPG" alt="Yusuke Kishimoto">
+          </div>
+          <div class="about-text">
+            <p class="about-name">Yusuke Kishimoto ~AI Samurai~</p>
+            <p class="about-title">Fondateur, Sapporo Sugoi AI Community<br>Organisateur, AI Festival & Dojo</p>
+            <h2>Créer des espaces pour découvrir et partager la magie de l'IA.</h2>
+            <p>J'interviens dans l'éducation, la pratique professionnelle et l'animation de communautés, avec l'IA générative au cœur de mon travail.
+              À travers des cours dans des institutions telles que l'Université de Hokkaido, la rédaction d'articles techniques totalisant plus de 240 000 pages vues et l'organisation de 30 événements, je partage les possibilités de l'IA.</p>
+            <div class="about-links">
+              <a href="https://zenn.dev/ykishimotoy" target="_blank" rel="noopener">Zenn</a>
+              <a href="https://note.com/ykishimotoy" target="_blank" rel="noopener">note</a>
+              <a href="https://x.com/ykishimotoy" target="_blank" rel="noopener">X</a>
+              <a href="https://github.com/ykishimotoy" target="_blank" rel="noopener">GitHub</a>
+            </div>
+            <div class="about-actions">
+              <a href="#portfolio" class="btn-portfolio">Voir le portfolio &rarr;</a>
+              <a href="achievements.html" class="btn-achievements">Voir les réalisations &rarr;</a>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Projects -->
+    <section class="projects">
+      <div class="container">
+        <h2 class="section-title">Projects</h2>
+        <div class="project-grid">
+
+          <a href="https://dojo.sugoiai.org" target="_blank" rel="noopener" class="project-card">
+            <div class="project-image">
+              <img src="img/dojo.png" alt="Sugoi AI Dojo">
+            </div>
+            <div class="project-info">
+              <h3>Sugoi AI Dojo</h3>
+              <p>Plateforme gratuite d'e-learning sur l'IA. Aucune inscription requise.</p>
+              <span class="project-link">Apprendre l'IA →</span>
+            </div>
+          </a>
+
+          <a href="https://matsuri-2026-summer.sugoiai.org/" target="_blank" rel="noopener" class="project-card">
+            <div class="project-image">
+              <img src="img/matsuri2.jpg" alt="Sapporo Sugoi AI Festival">
+            </div>
+            <div class="project-info">
+              <h3>Sapporo Sugoi AI Festival</h3>
+              <p>Un événement citoyen pour apprendre, créer et présenter avec l'IA.</p>
+              <span class="project-link">Voir l'événement →</span>
+            </div>
+          </a>
+
+          <a href="https://sapporo-sugoi-ai.connpass.com" target="_blank" rel="noopener" class="project-card">
+            <div class="project-image">
+              <img src="img/community.JPG" alt="Sapporo Sugoi AI Community">
+            </div>
+            <div class="project-info">
+              <h3>Sapporo Sugoi AI Community</h3>
+              <p>Une communauté qui partage l'enthousiasme pour l'IA à travers des événements réguliers.</p>
+              <span class="project-link">Voir les événements →</span>
+            </div>
+          </a>
+
+          <a href="https://film-2026-summer.sugoiai.org/" target="_blank" rel="noopener" class="project-card">
+            <div class="project-image">
+              <img src="img/film2.jpg" alt="Sapporo Sugoi AI Film Festival">
+            </div>
+            <div class="project-info">
+              <h3>Sapporo Sugoi AI Film Festival</h3>
+              <p>Un festival de films IA pour les créateurs, où chacun peut projeter son œuvre à Sapporo.</p>
+              <span class="project-link">Voir l'événement →</span>
+            </div>
+          </a>
+
+          <a href="https://hack-2026-summer.sugoiai.org/" target="_blank" rel="noopener" class="project-card">
+            <div class="project-image">
+              <img src="img/hack.png" alt="Sapporo Sugoi AI Hackathon">
+            </div>
+            <div class="project-info">
+              <h3>Sapporo Sugoi AI Hackathon</h3>
+              <p>Créer un monde en 2 heures. Un hackathon centré sur le développement piloté par l'IA.</p>
+              <span class="project-link">Voir l'événement →</span>
+            </div>
+          </a>
+
+        </div>
+      </div>
+    </section>
+
+    <!-- Portfolio -->
+    <section class="portfolio" data-anchor="portfolio">
+      <div class="container">
+        <h2 class="section-title">Portfolio</h2>
+        <div class="portfolio-grid">
+
+          <article class="portfolio-card" data-youtube-id="oEXRL-_JLHk" role="button" tabindex="0" aria-label="Lire Le Gardien de phare de l'espace">
+            <div class="portfolio-thumb">
+              <img src="https://img.youtube.com/vi/oEXRL-_JLHk/hqdefault.jpg" alt="Le gardien de phare de l'espace">
+              <span class="play-icon" aria-hidden="true"></span>
+              <span class="play-badge">YouTube</span>
+            </div>
+            <div class="portfolio-info">
+              <span class="portfolio-type">AI Short Film</span>
+              <h3>Le Gardien de phare de l'espace</h3>
+              <p>L'histoire d'un vieil homme qui veille seul sur un phare dans l'espace.<br>Un film en prises de vues réelles entièrement généré par IA.</p>
+              <span class="portfolio-link">Lire la vidéo intégrée &rarr;</span>
+            </div>
+          </article>
+
+          <article class="portfolio-card portfolio-card-featured" data-youtube-id="ci-EPDP2yT4" role="button" tabindex="0" aria-label="Lire La Fille sans talent du marquis et la révolution scientifique du vieux mage">
+            <div class="portfolio-thumb">
+              <img src="https://img.youtube.com/vi/ci-EPDP2yT4/hqdefault.jpg" alt="La révolution scientifique de la fille sans talent du marquis et du vieux mage">
+              <span class="play-icon" aria-hidden="true"></span>
+              <span class="play-badge">YouTube</span>
+            </div>
+            <div class="portfolio-info">
+              <span class="portfolio-type">AI Animation</span>
+              <h3>La Fille sans talent du marquis et la révolution scientifique du vieux mage</h3>
+              <p>L'histoire des échecs et de l'évolution de la magicienne Pirika.<br>Un anime de combats magiques réalisé par IA, adapté d'un web-roman populaire.</p>
+              <div class="source-work">
+                <span>Roman original</span>
+                <strong>La Fille sans talent du marquis et la révolution scientifique du vieux mage</strong>
+                <small>Auteur : Koh</small>
+                <a href="https://kakuyomu.jp/works/2912051599367178407" target="_blank" rel="noopener">Lire sur Kakuyomu &rarr;</a>
+              </div>
+              <div class="source-work">
+                <span>Concours</span>
+                <strong>Sélectionné au premier tour du concours d'anime IA « COLO-TEK »</strong>
+                <a href="https://colo-tek.com/news/20260711" target="_blank" rel="noopener">Voir l'annonce &rarr;</a>
+              </div>
+              <span class="portfolio-link">Lire la vidéo intégrée &rarr;</span>
+            </div>
+          </article>
+
+          <article class="portfolio-card" data-youtube-id="5LewG23dpaQ" role="button" tabindex="0" aria-label="Lire Publicité EQUES Inc. — Implantation à Sapporo">
+            <div class="portfolio-thumb">
+              <img src="https://img.youtube.com/vi/5LewG23dpaQ/hqdefault.jpg" alt="Publicité EQUES Inc. — Implantation à Sapporo">
+              <span class="play-icon" aria-hidden="true"></span>
+              <span class="play-badge">YouTube</span>
+            </div>
+            <div class="portfolio-info">
+              <span class="portfolio-type">AI Commercial</span>
+              <h3>Publicité EQUES Inc. — Implantation à Sapporo</h3>
+              <p>Une publicité illustrant l'implantation à Sapporo de la start-up IA EQUES Inc.<br>Produite avec l'IA générative.</p>
+              <span class="portfolio-link">Lire la vidéo intégrée &rarr;</span>
+            </div>
+          </article>
+
+        </div>
+      </div>
+    </section>
+
+    <!-- Numbers -->
+    <section class="numbers">
+      <div class="container">
+        <div class="numbers-grid">
+          <div class="number-item">
+            <span class="number">242 000+</span>
+            <span class="number-label">Pages vues</span>
+          </div>
+          <div class="number-item">
+            <span class="number">4 journaux / 1 TV</span>
+            <span class="number-label">Couverture médiatique</span>
+          </div>
+          <div class="number-item">
+            <span class="number">200+</span>
+            <span class="number-label">Membres Discord</span>
+          </div>
+          <div class="number-item">
+            <span class="number">5</span>
+            <span class="number-label">Cours universitaires & lycéens</span>
+          </div>
+        </div>
+        <div class="numbers-more">
+          <a href="achievements.html" class="more-link">Voir toutes les réalisations &rarr;</a>
+        </div>
+      </div>
+    </section>
+
+    <!-- Philosophy -->
+    <section class="philosophy">
+      <div class="container">
+        <div class="philosophy-content">
+          <blockquote>
+            « Avec l'IA, la puissance d'une seule personne est multipliée par 100. Alors commencez par la toucher, par l'expérimenter. »
+          </blockquote>
+        </div>
+      </div>
+    </section>
+
+    <!-- Personal -->
+    <section class="personal">
+      <div class="container">
+        <h2 class="section-title">Beyond AI</h2>
+        <p class="section-desc">J'accorde de l'importance à l'apprentissage par le corps et à l'expression silencieuse des idées.</p>
+        <div class="personal-grid">
+          <div class="personal-card">
+            <div class="personal-image">
+              <img src="img/budo.png" alt="BUDO">
+            </div>
+            <div class="personal-info">
+              <h3>Arts martiaux</h3>
+              <ul>
+                <li>Iaido</li>
+                <li>Jodo</li>
+                <li>Aikido</li>
+                <li>Karate</li>
+              </ul>
+            </div>
+          </div>
+          <div class="personal-card">
+            <div class="personal-image">
+              <img src="img/art.JPG" alt="ART">
+            </div>
+            <div class="personal-info">
+              <h3>Arts</h3>
+              <ul>
+                <li>Shakuhachi</li>
+                <li>Peinture à l'encre (sumi-e)</li>
+              </ul>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Contact -->
+    <footer class="contact">
+      <div class="container">
+        <h2>Let's Connect</h2>
+        <p>Ouvert aux collaborations et aux demandes de renseignements.</p>
+        <div class="contact-links">
+          <a href="https://forms.gle/2ec8u51XB7iNEFso7" target="_blank" rel="noopener" class="contact-item">
+            <span class="contact-icon">✉</span>
+            <span>Formulaire de contact</span>
+          </a>
+          <a href="https://x.com/ykishimotoy" target="_blank" rel="noopener" class="contact-item">
+            <span class="contact-icon">𝕏</span>
+            <span>@ykishimotoy</span>
+          </a>
+          <a href="https://discord.gg/Ve2tQeN7cw" target="_blank" rel="noopener" class="contact-item">
+            <span class="contact-icon">💬</span>
+            <span>Discord</span>
+          </a>
+        </div>
+        <p class="copyright">© 2026 Yusuke Kishimoto</p>
+      </div>
+    </footer>
+
+  </div>
+
+  <!-- ==================== GERMAN ==================== -->
+  <div id="content-de" class="content-wrapper" style="display: none;">
+
+    <!-- Hero -->
+    <section class="hero">
+      <div class="hero-bg"></div>
+      <div class="hero-content">
+        <h1 class="hero-title">
+          <span>KI ist unglaublich.</span>
+          <span>Aus Begeisterung für KI</span>
+          <span>wird Können für alle.</span>
+        </h1>
+        <div class="hero-cta">
+          <!--<a href="https://dojo.sugoiai.org" target="_blank" rel="noopener" class="btn btn-primary">KI lernen</a>-->
+        </div>
+      </div>
+      <div class="scroll-indicator">
+        <span></span>
+      </div>
+    </section>
+
+    <!-- About -->
+    <section class="about">
+      <div class="container">
+        <div class="about-grid">
+          <div class="about-image">
+            <img src="img/main.JPG" alt="Yusuke Kishimoto">
+          </div>
+          <div class="about-text">
+            <p class="about-name">Yusuke Kishimoto ~AI Samurai~</p>
+            <p class="about-title">Gründer, Sapporo Sugoi AI Community<br>Organisator, AI Festival & Dojo</p>
+            <h2>Räume schaffen, um das Wunder der KI zu erleben und zu teilen.</h2>
+            <p>Ich bin in den Bereichen Bildung, berufliche Praxis und Community-Aufbau tätig – mit generativer KI im Mittelpunkt.
+              Durch Vorlesungen an Institutionen wie der Universität Hokkaido, technische Fachartikel mit insgesamt über 240.000 Seitenaufrufen und die Organisation von 30 Veranstaltungen vermittle ich die Möglichkeiten der KI.</p>
+            <div class="about-links">
+              <a href="https://zenn.dev/ykishimotoy" target="_blank" rel="noopener">Zenn</a>
+              <a href="https://note.com/ykishimotoy" target="_blank" rel="noopener">note</a>
+              <a href="https://x.com/ykishimotoy" target="_blank" rel="noopener">X</a>
+              <a href="https://github.com/ykishimotoy" target="_blank" rel="noopener">GitHub</a>
+            </div>
+            <div class="about-actions">
+              <a href="#portfolio" class="btn-portfolio">Zum Portfolio &rarr;</a>
+              <a href="achievements.html" class="btn-achievements">Erfolge ansehen &rarr;</a>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Projects -->
+    <section class="projects">
+      <div class="container">
+        <h2 class="section-title">Projects</h2>
+        <div class="project-grid">
+
+          <a href="https://dojo.sugoiai.org" target="_blank" rel="noopener" class="project-card">
+            <div class="project-image">
+              <img src="img/dojo.png" alt="Sugoi AI Dojo">
+            </div>
+            <div class="project-info">
+              <h3>Sugoi AI Dojo</h3>
+              <p>Kostenlose E-Learning-Plattform für KI. Keine Registrierung erforderlich.</p>
+              <span class="project-link">KI lernen →</span>
+            </div>
+          </a>
+
+          <a href="https://matsuri-2026-summer.sugoiai.org/" target="_blank" rel="noopener" class="project-card">
+            <div class="project-image">
+              <img src="img/matsuri2.jpg" alt="Sapporo Sugoi AI Festival">
+            </div>
+            <div class="project-info">
+              <h3>Sapporo Sugoi AI Festival</h3>
+              <p>Eine von Bürgerinnen und Bürgern getragene Veranstaltung, um mit KI zu lernen, zu gestalten und zu präsentieren.</p>
+              <span class="project-link">Zum Event →</span>
+            </div>
+          </a>
+
+          <a href="https://sapporo-sugoi-ai.connpass.com" target="_blank" rel="noopener" class="project-card">
+            <div class="project-image">
+              <img src="img/community.JPG" alt="Sapporo Sugoi AI Community">
+            </div>
+            <div class="project-info">
+              <h3>Sapporo Sugoi AI Community</h3>
+              <p>Eine Community, die die Begeisterung für KI bei regelmäßigen Veranstaltungen teilt.</p>
+              <span class="project-link">Zu den Events →</span>
+            </div>
+          </a>
+
+          <a href="https://film-2026-summer.sugoiai.org/" target="_blank" rel="noopener" class="project-card">
+            <div class="project-image">
+              <img src="img/film2.jpg" alt="Sapporo Sugoi AI Film Festival">
+            </div>
+            <div class="project-info">
+              <h3>Sapporo Sugoi AI Film Festival</h3>
+              <p>Ein KI-Filmfestival für Kreative, bei dem alle ihre Werke in Sapporo vorführen können.</p>
+              <span class="project-link">Zum Event →</span>
+            </div>
+          </a>
+
+          <a href="https://hack-2026-summer.sugoiai.org/" target="_blank" rel="noopener" class="project-card">
+            <div class="project-image">
+              <img src="img/hack.png" alt="Sapporo Sugoi AI Hackathon">
+            </div>
+            <div class="project-info">
+              <h3>Sapporo Sugoi AI Hackathon</h3>
+              <p>In 2 Stunden eine Welt erschaffen. Ein Hackathon rund um KI-gestützte Entwicklung.</p>
+              <span class="project-link">Zum Event →</span>
+            </div>
+          </a>
+
+        </div>
+      </div>
+    </section>
+
+    <!-- Portfolio -->
+    <section class="portfolio" data-anchor="portfolio">
+      <div class="container">
+        <h2 class="section-title">Portfolio</h2>
+        <div class="portfolio-grid">
+
+          <article class="portfolio-card" data-youtube-id="oEXRL-_JLHk" role="button" tabindex="0" aria-label="Ein Leuchtturmwärter im Weltall abspielen">
+            <div class="portfolio-thumb">
+              <img src="https://img.youtube.com/vi/oEXRL-_JLHk/hqdefault.jpg" alt="Ein Leuchtturmwärter im Weltall">
+              <span class="play-icon" aria-hidden="true"></span>
+              <span class="play-badge">YouTube</span>
+            </div>
+            <div class="portfolio-info">
+              <span class="portfolio-type">AI Short Film</span>
+              <h3>Ein Leuchtturmwärter im Weltall</h3>
+              <p>Die Geschichte eines alten Mannes, der allein im Weltall einen Leuchtturm hütet.<br>Ein Realfilm, vollständig mit KI erzeugt.</p>
+              <span class="portfolio-link">Eingebettetes Video abspielen &rarr;</span>
+            </div>
+          </article>
+
+          <article class="portfolio-card portfolio-card-featured" data-youtube-id="ci-EPDP2yT4" role="button" tabindex="0" aria-label="Die talentlose Marquistochter und die wissenschaftliche Revolution des alten Zauberers abspielen">
+            <div class="portfolio-thumb">
+              <img src="https://img.youtube.com/vi/ci-EPDP2yT4/hqdefault.jpg" alt="Die talentlose Marquistochter und die wissenschaftliche Revolution des alten Zauberers">
+              <span class="play-icon" aria-hidden="true"></span>
+              <span class="play-badge">YouTube</span>
+            </div>
+            <div class="portfolio-info">
+              <span class="portfolio-type">AI Animation</span>
+              <h3>Die talentlose Marquistochter und die wissenschaftliche Revolution des alten Zauberers</h3>
+              <p>Die Geschichte von den Rückschlägen und dem Wachstum der Magierin Pirika.<br>Ein mit KI erstellter Magie-Kampf-Anime nach einem beliebten Webroman.</p>
+              <div class="source-work">
+                <span>Romanvorlage</span>
+                <strong>Die talentlose Marquistochter und die wissenschaftliche Revolution des alten Zauberers</strong>
+                <small>Autor: Koh</small>
+                <a href="https://kakuyomu.jp/works/2912051599367178407" target="_blank" rel="noopener">Auf Kakuyomu lesen &rarr;</a>
+              </div>
+              <div class="source-work">
+                <span>Wettbewerb</span>
+                <strong>Erste Runde des KI-Anime-Wettbewerbs „COLO-TEK“ bestanden</strong>
+                <a href="https://colo-tek.com/news/20260711" target="_blank" rel="noopener">Zur Ankündigung &rarr;</a>
+              </div>
+              <span class="portfolio-link">Eingebettetes Video abspielen &rarr;</span>
+            </div>
+          </article>
+
+          <article class="portfolio-card" data-youtube-id="5LewG23dpaQ" role="button" tabindex="0" aria-label="EQUES Inc. Werbespot — Expansion nach Sapporo abspielen">
+            <div class="portfolio-thumb">
+              <img src="https://img.youtube.com/vi/5LewG23dpaQ/hqdefault.jpg" alt="EQUES Inc. Werbespot — Expansion nach Sapporo">
+              <span class="play-icon" aria-hidden="true"></span>
+              <span class="play-badge">YouTube</span>
+            </div>
+            <div class="portfolio-info">
+              <span class="portfolio-type">AI Commercial</span>
+              <h3>EQUES Inc. Werbespot — Expansion nach Sapporo</h3>
+              <p>Ein Werbespot über die Expansion des KI-Start-ups EQUES Inc. nach Sapporo.<br>Produziert mit generativer KI.</p>
+              <span class="portfolio-link">Eingebettetes Video abspielen &rarr;</span>
+            </div>
+          </article>
+
+        </div>
+      </div>
+    </section>
+
+    <!-- Numbers -->
+    <section class="numbers">
+      <div class="container">
+        <div class="numbers-grid">
+          <div class="number-item">
+            <span class="number">242.000+</span>
+            <span class="number-label">Artikelaufrufe</span>
+          </div>
+          <div class="number-item">
+            <span class="number">4 Zeitungen / 1 TV</span>
+            <span class="number-label">Medienberichte</span>
+          </div>
+          <div class="number-item">
+            <span class="number">200+</span>
+            <span class="number-label">Discord-Mitglieder</span>
+          </div>
+          <div class="number-item">
+            <span class="number">5</span>
+            <span class="number-label">Kurse an Universitäten & Oberschulen</span>
+          </div>
+        </div>
+        <div class="numbers-more">
+          <a href="achievements.html" class="more-link">Alle Erfolge ansehen &rarr;</a>
+        </div>
+      </div>
+    </section>
+
+    <!-- Philosophy -->
+    <section class="philosophy">
+      <div class="container">
+        <div class="philosophy-content">
+          <blockquote>
+            „Mit KI vervielfacht sich die Kraft eines einzelnen Menschen um das Hundertfache. Also fang einfach an – berühre sie, erlebe sie.“
+          </blockquote>
+        </div>
+      </div>
+    </section>
+
+    <!-- Personal -->
+    <section class="personal">
+      <div class="container">
+        <h2 class="section-title">Beyond AI</h2>
+        <p class="section-desc">Mir ist wichtig, mit dem Körper zu lernen und Gedanken in der Stille auszudrücken.</p>
+        <div class="personal-grid">
+          <div class="personal-card">
+            <div class="personal-image">
+              <img src="img/budo.png" alt="BUDO">
+            </div>
+            <div class="personal-info">
+              <h3>Kampfkünste</h3>
+              <ul>
+                <li>Iaido</li>
+                <li>Jodo</li>
+                <li>Aikido</li>
+                <li>Karate</li>
+              </ul>
+            </div>
+          </div>
+          <div class="personal-card">
+            <div class="personal-image">
+              <img src="img/art.JPG" alt="ART">
+            </div>
+            <div class="personal-info">
+              <h3>Künste</h3>
+              <ul>
+                <li>Shakuhachi</li>
+                <li>Tuschemalerei (Sumi-e)</li>
+              </ul>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Contact -->
+    <footer class="contact">
+      <div class="container">
+        <h2>Let's Connect</h2>
+        <p>Offen für Zusammenarbeit und Anfragen.</p>
+        <div class="contact-links">
+          <a href="https://forms.gle/2ec8u51XB7iNEFso7" target="_blank" rel="noopener" class="contact-item">
+            <span class="contact-icon">✉</span>
+            <span>Kontaktformular</span>
           </a>
           <a href="https://x.com/ykishimotoy" target="_blank" rel="noopener" class="contact-item">
             <span class="contact-icon">𝕏</span>
