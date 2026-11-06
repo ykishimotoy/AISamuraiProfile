@@ -972,6 +972,27 @@ ul {
   margin-bottom: 48px;
 }
 
+.contact-actions {
+  display: flex;
+  justify-content: center;
+  margin: -16px 0 48px;
+}
+
+.btn-achievements--contact {
+  display: inline-block;
+  margin-top: 0;
+  min-width: 240px;
+  color: var(--black);
+  background: var(--white);
+  border-color: var(--white);
+}
+
+.btn-achievements--contact:hover {
+  color: var(--white);
+  background: transparent;
+  border-color: var(--white);
+}
+
 .contact-links {
   display: flex;
   justify-content: center;
