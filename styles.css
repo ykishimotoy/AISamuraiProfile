@@ -1223,3 +1223,162 @@ ul {
     transform: translate(-50%, -50%);
   }
 }
+
+/* ============================================
+   Novel feature card (link to novels01.html)
+   Shared by index.html and achievements.html
+   ============================================ */
+.novel-section {
+  padding: 0 0 120px;
+  background: var(--white);
+}
+
+.novel-feature {
+  display: grid;
+  grid-template-columns: minmax(0, 1fr) minmax(0, 420px);
+  gap: 48px;
+  align-items: center;
+  padding: 48px;
+  color: #b9c0cf;
+  background:
+    radial-gradient(ellipse 60% 80% at 85% 10%, rgba(88, 130, 210, 0.28), transparent 70%),
+    linear-gradient(135deg, #0b1222, #070b16);
+  border: 1px solid #1c2740;
+  border-radius: var(--radius);
+  box-shadow: 0 12px 40px rgba(0, 0, 0, 0.12);
+  transition: var(--transition);
+}
+
+.novel-feature:hover,
+.novel-feature:focus-visible {
+  transform: translateY(-6px);
+  box-shadow: 0 24px 60px rgba(11, 18, 34, 0.35);
+}
+
+.novel-feature:focus-visible {
+  outline: 3px solid rgba(37, 99, 235, 0.45);
+  outline-offset: 4px;
+}
+
+.novel-feature-label {
+  display: block;
+  font-size: 12px;
+  font-weight: 700;
+  letter-spacing: 0.14em;
+  text-transform: uppercase;
+  color: #9cc1ee;
+  margin-bottom: 14px;
+}
+
+.novel-feature h3 {
+  font-size: 1rem;
+  font-weight: 500;
+  letter-spacing: 0.2em;
+  color: #e9e7e0;
+  margin-bottom: 10px;
+}
+
+.novel-feature-copy {
+  font-family: 'Hiragino Mincho ProN', 'Yu Mincho', 'YuMincho', 'Noto Serif JP', Georgia, serif;
+  font-size: clamp(1.5rem, 3.2vw, 2.2rem);
+  line-height: 1.5;
+  letter-spacing: 0.04em;
+  color: #fff;
+  margin-bottom: 18px;
+}
+
+.novel-feature-desc {
+  font-size: 0.95rem;
+  line-height: 1.8;
+  margin-bottom: 26px;
+}
+
+.novel-feature-link {
+  display: inline-block;
+  padding: 12px 28px;
+  font-size: 14px;
+  font-weight: 700;
+  color: #070b16;
+  background: #e9e7e0;
+  border-radius: 999px;
+  transition: var(--transition);
+}
+
+.novel-feature:hover .novel-feature-link {
+  background: #fff;
+}
+
+.novel-feature-vols {
+  display: grid;
+  grid-template-columns: repeat(5, 1fr);
+  gap: 8px;
+}
+
+.novel-feature-vol {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  min-height: 150px;
+  padding: 12px 8px;
+  font-size: 12px;
+  font-weight: 500;
+  line-height: 1.4;
+  color: #e9e7e0;
+  background: linear-gradient(180deg, rgba(255, 255, 255, 0.07), rgba(255, 255, 255, 0.02));
+  border: 1px solid rgba(160, 185, 230, 0.18);
+  border-top: 2px solid var(--vol);
+  border-radius: 6px;
+  overflow-wrap: anywhere;
+}
+
+.novel-feature-vol small {
+  font-size: 10px;
+  font-weight: 700;
+  letter-spacing: 0.1em;
+  color: var(--vol);
+}
+
+.novel-feature-vol--1 { --vol: #7fb0ff; }
+.novel-feature-vol--2 { --vol: #86d3a4; }
+.novel-feature-vol--3 { --vol: #f08a8c; }
+.novel-feature-vol--4 { --vol: #66dcd3; }
+.novel-feature-vol--5 { --vol: #bda4f5; }
+
+.novel-feature--compact {
+  padding: 32px 36px;
+  margin-bottom: 28px;
+}
+
+.novel-feature--compact .novel-feature-copy {
+  font-size: clamp(1.3rem, 2.4vw, 1.7rem);
+}
+
+.novel-feature--compact .novel-feature-vol {
+  min-height: 104px;
+}
+
+@media (max-width: 860px) {
+  .novel-feature {
+    grid-template-columns: 1fr;
+    gap: 28px;
+    padding: 32px 24px;
+  }
+
+  .novel-feature-vol,
+  .novel-feature--compact .novel-feature-vol {
+    min-height: 76px;
+    padding: 10px 6px;
+    font-size: 11px;
+  }
+}
+
+@media (max-width: 640px) {
+  .novel-section {
+    padding-bottom: 80px;
+  }
+
+  .novel-feature-link {
+    display: block;
+    text-align: center;
+  }
+}
