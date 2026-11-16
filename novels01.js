@@ -86,7 +86,7 @@
       title: 'シンバイ教授と夢遊病者 〜まだ、論文がない〜',
       shortTitle: 'まだ、論文がない',
       theme: '心',
-      tagline: '「恋は、罪悪ですよ」 天才物理学者は、恋を消す薬を作りはじめた。',
+      tagline: '「恋は、罪悪ですよ」 天才は、恋を消す薬を作りはじめた。',
       episodes: 89,
       url: 'https://kakuyomu.jp/works/11054822667002022571',
       color: '#bda4f5',

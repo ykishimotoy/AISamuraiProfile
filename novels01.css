@@ -665,11 +665,11 @@ ul { list-style: none; }
    ============================================ */
 .characters {
   display: grid;
-  grid-template-columns: repeat(4, 1fr);
-  gap: 18px;
+  grid-template-columns: repeat(5, 1fr);
+  gap: 14px;
 }
 .character {
-  padding: 30px 24px 28px;
+  padding: 28px 20px 26px;
   background: var(--panel);
   border: 1px solid var(--line);
   border-radius: var(--radius);
@@ -705,8 +705,7 @@ ul { list-style: none; }
   margin: 2px 0 12px;
 }
 .character h3 small {
-  display: inline-block;
-  margin-left: 10px;
+  display: block;
   font-family: var(--sans);
   font-weight: 400;
   font-size: 12px;
@@ -1019,7 +1018,9 @@ ul { list-style: none; }
   .vol-links li:nth-child(-n+2) { grid-column: span 3; }
   .vol-link { min-height: 0; }
 
-  .characters { grid-template-columns: repeat(2, 1fr); }
+  .characters { grid-template-columns: repeat(6, 1fr); gap: 16px; }
+  .characters li { grid-column: span 2; }
+  .characters li:nth-child(-n+2) { grid-column: span 3; }
 
   .read-cards { grid-template-columns: repeat(6, 1fr); }
   .read-cards li { grid-column: span 2; }
@@ -1103,6 +1104,7 @@ ul { list-style: none; }
   .btn-read { justify-content: center; }
 
   .characters { grid-template-columns: 1fr; gap: 12px; }
+  .characters li, .characters li:nth-child(-n+2) { grid-column: auto; }
   .character { padding: 24px 22px; }
   .character-mark { width: 48px; height: 48px; margin-bottom: 16px; }
 
